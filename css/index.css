@@ -81,6 +81,37 @@ nav a:hover {
   }
 }
 
+.scroll-arrow {
+  position: fixed;
+  bottom: 80px;
+  right: 40px;
+  animation: scrollAnimation 1s infinite;
+}
+
+.scroll-arrow span {
+  display: block;
+  width: 30px;
+  height: 30px;
+  border: solid white;
+  border-color: #333;
+  border-width: 0 3px 3px 0;
+  transform: rotate(45deg);
+  animation: arrowBlink 1s infinite;
+
+}
+
+@keyframes scrollAnimation {
+  0% { opacity: 0; }
+  50% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+@keyframes arrowBlink {
+  0%, 100% { opacity: 0; }
+  50% { opacity: 1; }
+}
+
+
 /* home section styles */
 
 .home-content {
@@ -91,6 +122,7 @@ nav a:hover {
   padding-left: 25%;
   padding-right: 25%;
   padding-bottom: 25%;
+  margin-top: -30px;
 }
 
 .home-content h1 {
@@ -261,7 +293,8 @@ nav a:hover {
 }
 
 .custom-dot-list li {
-  color: black;
+  color: color: #333;
+  font-size: 18px;
   padding: 5px;
 }
 
@@ -407,5 +440,16 @@ footer p{
 }
 
 .text-p1{
+  color: #333;
   font-size: 20px;
 }
+
+#pdf-container {
+  width: 60vw;
+  height: 90vh;
+  padding-left: 20vw;
+  padding-right: 20vw;
+  margin-top: -90px;
+  border: none;
+}
+
