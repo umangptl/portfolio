@@ -5,6 +5,48 @@ body {
   background-color: #F5F5F5 ;
 }
 
+.Black-h1{
+  text-align: center;
+  font-size: 40px;
+  margin-top: 80px;
+  color: #333;
+  position: relative;
+}
+
+.Black-h1::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -10px;
+  transform: translateX(-50%);
+  width: 15%;
+  height: 4px;
+  background-color: #0CC0DF;
+}
+
+/* button styles */
+
+.button-black-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  padding: 25px;
+}
+
+.button-black {
+  background-color: #333;
+  color: #FAF9F6;
+  padding: 10px 20px;
+  text-decoration: none;
+  border: 1px solid #333;
+  margin-bottom:80px;
+}
+
+.button-black:hover {
+  background-color: #FAF9F6;
+  color: #333;
+}
+
 /* header section style*/
 
 header {
@@ -56,8 +98,8 @@ nav a:hover {
 
 /* backgound for top home style */
 .wallpaper-container {
-  min-height: 800px;
-  position: absolute;
+  min-height: 600px;
+  position: relative;
 }
 
 .background-shapes {
@@ -173,39 +215,57 @@ nav a:hover {
 
 .about {
   overflow-x: auto;
-  min-height: 700px;
   position: relative;
-  top: 800px;
-  background-color: #FAF9F6;
+  background-color: F5F5F5;
 }
 
-.about-text {
- padding: 3%;
-}
-
-.about-text h1 {
-  position: relative;
-  top: 10px;
-  margin-left: 25%;
-  color: #333;
-  font-size: 40px;
-}
-
-.about-text p{
+.about p{
   color: #333;
   font-size: 20px;
   margin-left: 5%;
   margin-right: 40%;
 }
 
+/* skills section styles */
+
+.skills{
+  background-color: #FAF9F6;
+  padding: 20px;
+}
+
+.skills h3{
+  color: #333;
+  margin-left: 100px;
+}
+
+.skills-bricks {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 10px;
+}
+
+.skill-brick {
+  background-color: #0CC0DF;
+  color: #FFFFFF;
+  padding: 5px 10px;
+  border-radius: 5px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  font-size: 14px
+}
+
+.skill-brick:hover{
+  background-color: #333;
+  color: #FFFFFF ;
+}
+
 /* project section styles */
 
-.project-h1{
-  text-align: center;
-  font-size: 40px;
-  margin-top: 850px;
-
+.project-container{
+  position: relative;
+  background-color: F5F5F5;
 }
+
 
 .project-text{
   text-align: center;
@@ -267,10 +327,9 @@ nav a:hover {
 
 /* Resume section styles */
 .resume-container {
+  position: relative;
   overflow: auto;
   background-color: #FAF9F6;
-  margin-top: 25px;
-  min-height: 600px;
 }
 
 .resume {
@@ -296,95 +355,6 @@ nav a:hover {
   color: color: #333;
   font-size: 18px;
   padding: 5px;
-}
-
-/* coursework styles */
-.certifications-grid {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(400px, 1fr));
-  gap: 20px;
-  padding: 30px;
-  margin-top: -40px;
-}
-
-.certification-card {
-  background-color: #FFFFFF;
-  padding: 10px;
-  border-radius: 5px;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-}
-
-.certification-card h3 {
-  font-size: 18px;
-  font-weight: bold;
-  margin-bottom: 5px;
-}
-
-.certification-card p {
-  color: #A5A5A5;
-  margin-top: 6px;
-  margin-bottom: -5px;
-}
-
-.skills-bricks {
-  display: flex;
-  flex-wrap: wrap;
-  margin-top: 10px;
-}
-
-.skill-brick {
-  background-color: #0CC0DF;
-  color: #FFFFFF;
-  padding: 5px 10px;
-  border-radius: 5px;
-  margin-right: 10px;
-  margin-bottom: 10px;
-  font-size: 14px
-}
-
-/* black button styles */
-
-.button-black-container {
-  display: flex;
-  justify-content: center;
-  padding: 25px;
-}
-
-.button-black {
-  background-color: #333;
-  color: #FAF9F6;
-  padding: 10px 20px;
-  text-decoration: none;
-  border: 1px solid #333;
-  margin-bottom:80px;
-}
-
-.button-black:hover {
-  background-color: #FAF9F6;
-  color: #333;
-}
-
-/* blue styles */
-
-.button-blue-container {
-  display: flex;
-  justify-content: center;
-  padding: 30px;
-}
-
-.button-blue {
-  background-color: #0CC0DF;
-  color: #FAF9F6;
-  padding: 10px 20px;
-  text-decoration: none;
-  border: 1px solid #0CC0DF;
-  margin-top: 30px;
-  margin-bottom:50px;
-}
-
-.button-blue:hover {
-  background-color: #FAF9F6;
-  color: #0CC0DF;
 }
 
 /* footer section styles */
@@ -432,12 +402,15 @@ footer p{
   margin: 10px 0; 
 }
 
+/* branch page styles */
+
 .heading-h1{
   text-align: center;
   font-size: 40px;
   margin-top: 80px;
   color: #0CC0DF;
 }
+
 .text-p{
   text-align: center;
   color: #A5A5A5;
@@ -448,10 +421,12 @@ footer p{
   color: #333;
   font-size: 20px;
 }
+
 .frame{
   width: 100%;
   height: 700px;
 }
+
 #pdf-container {
   width: 60%;
   height: 120%;
@@ -460,4 +435,35 @@ footer p{
   margin-top: -90px;
   border: none;
 }
+
+/* coursework styles */
+
+.certifications-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(400px, 1fr));
+  gap: 20px;
+  padding: 30px;
+  margin-top: -40px;
+}
+
+.certification-card {
+  background-color: #FFFFFF;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.certification-card h3 {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.certification-card p {
+  color: #A5A5A5;
+  margin-top: 6px;
+  margin-bottom: -5px;
+}
+
+
 
