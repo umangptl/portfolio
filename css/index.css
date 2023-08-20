@@ -47,6 +47,27 @@ body {
   color: #333;
 }
 
+.button-white-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  padding: 25px;
+}
+
+.button-white {
+  background-color: #FFFFFF;
+  color: #333;
+  padding: 10px 20px;
+  text-decoration: none;
+  border: 1px solid #333;
+  margin-bottom:10px;
+}
+
+.button-white:hover {
+  background-color: #333;
+  color: #FFFFFF;
+}
+
 /* header section style*/
 
 header {
@@ -425,6 +446,7 @@ footer p{
   font-weight: bold;
   margin-left: 30px;
   margin-top: 50px;
+
 }
 
 .blank-line {
