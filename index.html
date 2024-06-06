@@ -1,327 +1,348 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
-  <meta charset="utf-8">
-  <title>Umang's Portfolio</title> <!--#0CC0DF -->
-  <link rel="icon" href="Resources/logo/title.png" type="image/x-icon" >
-  <link rel="stylesheet" type="text/css" href="css/index.css">
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-NNVLD5333R"></script>
-  <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Umang Patel</title>
+	<link rel="stylesheet" href="styles.css">
+	<link rel="icon" href="Resources/logo/title.png" type="image/x-icon" >
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-NNVLD5333R"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
 
-  gtag('config', 'G-NNVLD5333R');
-</script>
+		gtag('config', 'G-NNVLD5333R');
+	</script>
 </head>
 <body>
-  <header>
-    <nav>
-      <img class="logo" src="Resources/logo/squarelogo.png">
-        <ul>
-          <li><a href="#home">Home</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#skills">Skills</a></li>
-          <li><a href="#Experience">Experience</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-    </nav>
-  </header>
-  
+	<header>
+		<nav class="navbar">
+			<div class="logo">&lt; Umang <br>&nbsp Patel /&gt;</div>
+			<ul class="nav-links">
+				<li><a href="#home" class="active">Home</a></li>
+				<li><a href="#about">About</a></li>
+				<li><a href="#experience">Experience</a></li>
+				<li><a href="#projects">Projects</a></li>
+				<li><a href="#contact">Contact</a></li>
+			</ul>
+			<div class="nav-right">
+				<a href="Resources/doc/Patel-Umang.pdf" target="_blank" style="text-decoration: none;"> <button class="resume-btn">RESUME</button> </a>
 
-<section id="home">
-  <div class="wallpaper-container">
-    <img class="home-logo" src="Resources/pics/design2.png" alt="Logo"> 
-    <div class="background-shapes"></div>
-    <div class="home-content">
-      <h1>Hi, I'm <span style="color: #333;"><u>Umang Patel.</u></span> </h1>
+				<button onclick="toggleDarkMode()">
+					<svg width="30" height="30" id="light-icon">
+						<circle cx="15" cy="15" r="6" fill="currentColor" />
+						<line
+						id="ray"
+						stroke="currentColor"
+						stroke-width="2"
+						stroke-linecap="round"
+						x1="15"
+						y1="1"
+						x2="15"
+						y2="4"
+						></line>
+						<use href="#ray" transform="rotate(45 15 15)" />
+						<use href="#ray" transform="rotate(90 15 15)" />
+						<use href="#ray" transform="rotate(135 15 15)" />
+						<use href="#ray" transform="rotate(180 15 15)" />
+						<use href="#ray" transform="rotate(225 15 15)" />
+						<use href="#ray" transform="rotate(270 15 15)" />
+						<use href="#ray" transform="rotate(315 15 15)" />
+					</svg>
+					<svg width="30" height="30" id="dark-icon">
+						<path
+						fill="currentColor"
+						d="
+						M 23, 5
+						A 12 12 0 1 0 23, 25
+						A 12 12 0 0 1 23, 5"
+						/>
+					</svg>
+				</button>
+			</div>
+		</nav>
+		<div class="line-1"></div>
+	</header>
+	<div class="dot-nav">
+		<div class="dot" data-target="home"></div>
+		<div class="dot" data-target="about"></div>
+		<div class="dot" data-target="experience"></div>
+		<div class="dot" data-target="projects"></div>
+		<div class="dot" data-target="contact"></div>
+	</div>
 
-      <p>I'm a <b><span style="color:#333;">Software Engineer,</span></b> based in <b>San Jose, California,</b></p>
+	<section id="home" class="home">
+		<div class="hero-content">
+			<div class="text-content">
+				<h1>Hi, I'm Umang Patel. <span class="wave">👋</span></h1>
+				<p>I'm a Software Engineer, I build innovative and efficient software solutions to power the future.</p>
+				<div class="hero-logos">
+					<div class="logo-circle">
+						<a href="mailto:umang26patel@gmail.com"><img src="Resources/logo/gmail.png" alt="Logo 1"></a>
+					</div>
+					<div class="logo-circle">
+						<a href="https://github.com/umangptl"><img src="Resources/logo/github.png" alt="Logo 2"></a>
+					</div>
+					<div class="logo-circle">
+						<a href="https://www.linkedin.com/in/umangptl"><img src="Resources/logo/linkedin.png" alt="Logo 3"></a>
+					</div>
+					<div class="logo-circle">
+						<a href="https://twitter.com/Umang2ptl"><img src="Resources/logo/TwitterX.png" alt="Logo 4"></a>
+					</div>
+					<div class="logo-circle">
+						<a href="https://www.instagram.com/umangptl"><img src="Resources/logo/Instagram.png" alt="Logo 5"></a>
+					</div>
+				</div>
+			</div>
+			<div class="image-content">
+				<div class="profile-picture">
+					<img src="Resources/picture/profile.jpeg" alt="Profile Picture">
+					<div class="shadow"></div>
+				</div>
+			</div>
+		</div>
+	</section>
 
-      <p>Currently, I'm pursuing my <b> MS in Software Engineering </b> at <b><span style="color:#2222FF ;">San Jose State University.</span> </b>I completed my undergraduate studies at <b><span style="color:#00B500  ;"> State University of New York at Oswego,</span> </b> earning a <b>BS in Software Engineering </b>in 2023.</p>
+	<section id="about" class="about">
+		<h2>About</h2>
+		<p>The first time I saw a computer was at my father’s workplace. I was young and curious about how these machines worked. Fast forward to today, <strong>I am pursuing my master’s degree</strong> in Software Engineering at San Jose, continuing to explore and fulfill my curiosity. I’ve had the privilege of building software programs <strong>for personal projects, a university, and an IT service company.</strong></p>
+		<p>My main focus these days is building simple and effective software that integrates seamlessly with AI models. I thrive at the intersection of design and engineering, creating solutions that are both functional and beautifully designed, leveraging the power of Artificial Intelligence.</p>
+		<p><strong>When I’m not at the computer,</strong> you can find me working out, reading, hanging out with friends, or watching Netflix.</p>
+	</section>
 
-      <div class="social-media">
-          <a href="mailto:umang26patel@gmail.com"><img src="Resources/logo/gmail.png" alt="Gmail"></a>
-          <a href="https://github.com/umangptl"><img src="Resources/logo/github.png" alt="Github"></a>
-          <a href="https://www.linkedin.com/in/umangptl/"><img src="Resources/logo/linkedin.png" alt="LinkedIn"></a>
-          <a href="https://twitter.com/Umang2ptl"><img src="Resources/logo/x.png" alt="x"></a>
-          <a href="https://www.instagram.com/umangptl/"><img src="Resources/logo/instagram.png" alt="Instagram"></a>
-        </div>
-        <p> Feel free to connect with me!</p>
+	<section id="experience" class="experience">
+		<h2>Experience</h2>
+		<div class="experience-item">
+			<div class="experience-header">
+				<div>
+					<h3>Software Engineer</h3>
+					<p>IBM x SUNY Collaborative Project</p>
+					<div class="tags">
+						<span class="tag">Java</span>
+						<span class="tag">React</span>
+						<span class="tag">Docker</span>
+						<span class="tag">Discord API</span>
+						<span class="tag">Open Liberty</span>
+					</div>
+				</div>
+				<div class="experience-date-location">
+					<p>AUG 2022 - DEC 2022</p>
+					<p>Oswego, NY</p>
+				</div>
+			</div>
+			<ul class="experience-details">
+				<li>Engineered a robust software application for retrieving and displaying vital messages from Discord onto a dedicated website, enhancing user experience and content access.</li>
+				<li>Improved project efficiency by 20% by accurately translating IBM stakeholders' requirements into actionable UML diagrams, accelerating time-to-market for new features.</li>
+				<li>Mastered agile methodologies and coordinated with over 5 teams to gain practical experience in professional-level development process management, achieving 100% project completion within timelines.</li>
+				<li>Analyzed and implemented a sophisticated Microservice architecture creating core elements: host, API services, JWT verification, and Discord Integration, enhancing the overall system architecture and functionality.</li>
+			</ul>
+		</div>
+		<a href="Resources/doc/Patel-Umang.pdf" class="view">View Full Resume</a>
+	</section>
 
+	<section id="projects" class="projects">
+		<h2>Projects</h2>
+		<h3>AI-Powered Predictions: Finance, Health, and Markets</h3>
+		<div class="projects-container">
+			<div class="project-item">
+				<img src="Resources/picture/project(1).png" alt="BitSmart Console - Bitcoin Prediction">
+				<div class="project-details">
+					<h4>BitSmart Console - Bitcoin Prediction</h4>
+					<p>Built a lightweight model to predict Bitcoin prices, achieving over 85% accuracy and ranked third-best model in class for swing trading strategies.</p>
+					<div class="project-tag">
+						<span class="project-tags">Python</span>
+						<span class="project-tags">Machine Learning</span>
+						<span class="project-tags">Random Forest</span>
+						<span class="project-tags">ARIMA</span>
+						<span class="project-tags">LSTM</span>
+						<span class="project-tags">Feature Engineering</span>
+					</div>
+					<a href="https://github.com/umangptl/BitSmart-Console" class="github">/umangptl/BitSmart-Console</a>
+				</div>
+			</div>
 
-    <div class="scroll-arrow">
-      <span></span>
-      <span></span>
-      <span></span>
-    </div>
+			<div class="project-item">
+				<img src="Resources/picture/project(2).png" alt="PriceVision - AI stock prediction web">
+				<div class="project-details">
+					<h4>Tele & Mental Health - Data Mining</h4>
+					<p>Developed an interactive web app to analyze and visualize trends in telehealth and mental health services, enhancing accessibility to health support.</p>
+					<div class="project-tag">
+						<span class="project-tags">Python</span>
+						<span class="project-tags">Streamlit</span>
+						<span class="project-tags">Data Mining</span>
+						<span class="project-tags">Data Visualization</span>
+						<span class="project-tags">Healthcare Analytics</span>
+					</div>
+					<a href="https://github.com/umangptl/Telehealth-n-Mental-Health-Dynamics" class="github">/umangptl/Tele-n-Mental-Dynamics</a>
+				</div>
+			</div>
+			<div class="project-item">
+				<img src="Resources/picture/project(3).jpeg" alt="Tele & Mental Health - Data Mining">
+				<div class="project-details">
+					<h4>PriceVision - AI stock prediction web</h4>
+					<p>Created a full-stack machine learning web app, leveraging LSTM for stock price prediction and integrating news updates using news API.</p>
+					<div class="project-tag">
+						<span class="project-tags">Python</span>
+						<span class="project-tags">Neural Networks</span>
+						<span class="project-tags">LSTM</span>
+						<span class="project-tags">React</span>
+						<span class="project-tags">Flask</span>
+						<span class="project-tags">API Integration</span>
+					</div>
+					<a href="https://github.com/umangptl/PriceVision" class="github">/umangptl/PriceVision</a>
+				</div>
+			</div>
+		</div>
+		<h3>AI and Robotics: Testing, Recognition and Radar</h3>
+		<div class="projects-container">
+			<div class="project-item">
+				<img src="Resources/picture/project(4).png" alt="Seeing-AI- Testing">
+				<div class="project-details">
+					<h4>Seeing-AI- Testing</h4>
+					<p>Designed an automated testing for SeeingAI application using Appium and Selenium, implementing partial text matching to verify apps accuracy, enhancing test efficiency and reliability</p>
+					<div class="project-tag">
+						<span class="project-tags">Appium</span>
+						<span class="project-tags">Selenium</span>
+						<span class="project-tags">Java</span>
+						<span class="project-tags">Automation Testing</span>
+						<span class="project-tags">Android SDK</span>
+					</div>
+					<a href="https://github.com/umangptl/Test-Automation-SeeingAI" class="github">/umangptl/Test-Automation</a>
+				</div>
+			</div>
+			<div class="project-item">
+				<img src="Resources/picture/project(5).png" alt="Character Recognition - IOS APP">
+				<div class="project-details">
+					<h4>Character Recognition - IOS APP</h4>
+					<p>Developed an iOS app for handwritten number recognition using CoreML and Vision frameworks with a trained MNIST model.</p>
+					<div class="project-tag">
+						<span class="project-tags">CoreML</span>
+						<span class="project-tags">Vision Framework</span>
+						<span class="project-tags">iOS Development</span>
+						<span class="project-tags">Machine Learning</span>
+						<span class="project-tags">Objective-C</span>
+					</div>
+					<a href="https://github.com/umangptl/App-Handwritten-Number-Recognition" class="github">/umangptl/Char-Recog</a>
+				</div>
+			</div>
+			<div class="project-item">
+				<img src="Resources/picture/project(6).png" alt="Robot Radar - GoPiGo">
+				<div class="project-details">
+					<h4>Robot Radar - GoPiGo</h4>
+					<p>Developed an obstacle detection and visualization app for Raspberry Pi robots using  sensors, for navigation and obstacle avoidance capabilities.</p>
+					<div class="project-tag">
+						<span class="project-tags">Python</span>
+						<span class="project-tags">Ultrasonic Sensors</span>
+						<span class="project-tags">Raspberry Pi</span>
+						<span class="project-tags">Robotics</span>
+						<span class="project-tags">Obstacle Detection</span>
+					</div>
+					<a href="https://github.com/umangptl/RobotRadar" class="github">/umangptl/RobotRadar</a>
+				</div>
+			</div>
+		</div>
+		<h3>Smart Systems: Applications, Tickets, and Social Platforms</h3>
+		<div class="projects-container">
+			<div class="project-item">
+				<img src="Resources/picture/project(8).png" alt="SilverTheater - Ticket booking sys">
+				<div class="project-details">
+					<h4>SilverTheater - Ticket booking Sys</h4>
+					<p>Developed comprehensive ticket booking system  to streamline the process of reserving seats for movies. This application features both user and admin functionalities.</p>
+					<div class="project-tag">
+						<span class="project-tags">Java</span>
+						<span class="project-tags">Spring Boot</span>
+						<span class="project-tags">HTML/CSS</span>
+						<span class="project-tags">MySQL</span>
+						<span class="project-tags">JavaScript</span>
+						<span class="project-tags">CI/CD</span>
+					</div>
+					<a href="https://github.com/umangptl/SilverTheater" class="github">/umangptl/SilverTheater</a>
+				</div>
+			</div>
+			<div class="project-item">
+				<img src="Resources/picture/project(7).png" alt="SkillMatch - Application Tracking Sys">
+				<div class="project-details">
+					<h4>SkillMatch - Application Tracking Sys</h4>
+					<p>Orchestrated end-to-end development of an enterprise application, a career portal for job seekers and recruiters, incorporating features like job listing management, and analytics</p> 
+					<div class="project-tag">
+						<span class="project-tags">AWS</span>
+						<span class="project-tags">React.js</span>
+						<span class="project-tags">MongoDB</span>
+						<span class="project-tags">JWT</span>
+						<span class="project-tags">Google SSO</span>
+						<span class="project-tags">RESTful APIs</span>
+						<span class="project-tags">Jenkins</span>
+					</div>
+					<a href="https://github.com/umangptl/I-TheIterators" class="github">/umangptl/SkillMatch</a>
+				</div>
+			</div>
+			<div class="project-item">
+				<img src="Resources/picture/project(9).png" alt="PostMaker - Discord Webpage">
+				<div class="project-details">
+					<h4>PostMaker - Discord Webpage</h4>
+					<p>Collaborated with mutiple teams to engineer a software app for retrieving and displaying pinned messages from Discord onto a dedicated website, enhancing user experience and content access.</p>
+					<div class="project-tag">
+						<span class="project-tags">Java</span>
+						<span class="project-tags">React</span>
+						<span class="project-tags">Docker</span>
+						<span class="project-tags">Discord API</span>
+						<span class="project-tags">Open Liberty</span>
+						<span class="project-tags">requirement Analysis</span>
+					</div>
+					<a href="https://github.com/umangptl/OZ-CSC-480-HCI-521-Fall-2022" class="github">/umangptl/PostMaker</a>
+				</div>
+			</div>
+		</div>
 
+		<a href="Full-Archive.html" class="view">View Full Project Archive</a>
+	</section>
 
-    </div>
-  </div>
+	<section id="contact" class="contact">
+		<h2>Contact me</h2>
+		<form class="contact-form">
+			<div class="form-group">
+				<label for="first-name">First name</label>
+				<input type="text" id="first-name" name="first-name" placeholder="John">
+			</div>
+			<div class="form-group">
+				<label for="last-name">Last name</label>
+				<input type="text" id="last-name" name="last-name" placeholder="Doe">
+			</div>
+			<div class="form-group">
+				<label for="email">Email address</label>
+				<input type="email" id="email" name="email" placeholder="emailJohn@doe.net">
+			</div>
+			<div class="form-group">
+				<label for="message">Your message</label>
+				<textarea id="message" name="message" placeholder="Enter your question or message"></textarea>
+			</div>
+			<button type="submit" class="submit-btn">Submit</button>
+		</form>
+	</section>
 
-</section>
+	<footer class="footer">
+		<div class="line-1"></div>
+		<div class="hero-logos">
+			<div class="logo-circle" style="width: 3vw; height: 3vw;">
+				<a href="mailto:umang26patel@gmail.com"><img src="Resources/logo/gmail.png" alt="Logo 1" style="margin-top: 10%;"></a>
+			</div>
+			<div class="logo-circle" style="width: 3vw; height: 3vw;">
+				<a href="https://github.com/umangptl"><img src="Resources/logo/github.png" alt="Logo 2" style="margin-top: 10%;"></a>
+			</div>
+			<div class="logo-circle" style="width: 3vw; height: 3vw;">
+				<a href="https://www.linkedin.com/in/umangptl"><img src="Resources/logo/linkedin.png" alt="Logo 3" style="margin-top: 10%;"></a>
+			</div>
+			<div class="logo-circle" style="width: 3vw; height: 3vw;">
+				<a href="https://twitter.com/Umang2ptl"><img src="Resources/logo/TwitterX.png" alt="Logo 4" style="margin-top: 10%;"></a>
+			</div>
+			<div class="logo-circle" style="width: 3vw; height: 3vw;">
+				<a href="https://www.instagram.com/umangptl"><img src="Resources/logo/Instagram.png" alt="Logo 5" style="margin-top: 10%;"></a>
+			</div>
+		</div>
+		<div class="footer-text">&lt; Umang Patel /&gt;</div>
+	</footer>
 
-
-<div class="about">
-<section id="about">
-    <img class="headshot" src="Resources/pics/umang.jpeg" alt="HeadShot">
-      <h1 class="Black-h1" style="margin-right: 35%;"> Over the years,</h1>
-      <p>Throughout my academic journey, I have consistently engaged in a diverse range of projects, demonstrating proficiency in software design, development, testing, and maintenance.</p>
-      <p>In my experience, I have applied machine learning models to solve complex problems, improving decision-making processes. Additionally, I have developed and deployed efficient web services that meet specific requirements. My expertise spans the entire software development lifecycle, including requirements gathering, analysis, design, development, testing, deployment, and maintenance.</p>
-      <p>By actively refining my programming skills and exploring various tools, I have honed my abilities and expanded my knowledge base. I am enthusiastic about embracing new technologies, frameworks, and innovative solutions that cater to user needs and have a positive impact on society</p>
-
-    <div class="button-black-container" style="margin-right: 35%;">
-      <a href="aboutme.html" class="button-black">VIEW SUMMARY</a>
-    </div>
-
-</section>
-</div>
-
-<section id="skills">
-  <div class="skills">
-   
-  <h1 class="Black-h1">Technical Skills</h1>
-
-  <div class="gif-container">
-     <img src="Resources/gif/developers.gif" alt="GIF Image">
-     <img src="Resources/gif/gifs.gif" alt="GIF Image">
-    </div> 
-
-<div class="container">
-
- <h3>Programming Languages</h3>
- <div class="skills-bricks">
-        <span class="skill-brick">Java</span>
-        <span class="skill-brick">Python</span>
-        <span class="skill-brick">C</span>
-        <span class="skill-brick">Clojure</span>
-        <span class="skill-brick">Scala</span>
-        <span class="skill-brick">Prolog</span>
-        <span class="skill-brick">C++</span>
-        <span class="skill-brick">XML</span>
-      </div>
- <h3>Web Technologies</h3>
- <div class="skills-bricks">
-        <span class="skill-brick">HTML</span>
-        <span class="skill-brick">CSS</span>
-        <span class="skill-brick">JavaScript</span>
-        <span class="skill-brick">React.js</span>
-        <span class="skill-brick">Node.js</span>
-        <span class="skill-brick">Vue.js</span>
-        <span class="skill-brick">Flask</span>
-        <span class="skill-brick">Servlets</span>
-        <span class="skill-brick">MVC</span>
-        <span class="skill-brick">Spring boot</span>
-        <span class="skill-brick">RESTful APIs</span>
-      </div>
-<h3>Cloud Services</h3>
- <div class="skills-bricks">
-        <span class="skill-brick">AWS</span>
-        <span class="skill-brick">Microsoft Azure</span>
-        <span class="skill-brick">Google Cloud</span>
-      </div>
- <h3>Database</h3>
- <div class="skills-bricks">
-        <span class="skill-brick">SQL</span>
-        <span class="skill-brick">MySQL</span>
-        <span class="skill-brick">PostgreSQL</span>
-        <span class="skill-brick">MongoDB</span>
-        <span class="skill-brick">Big Query</span>
-      </div>
- <h3>Data Analysis Skills</h3>
- <div class="skills-bricks">
-        <span class="skill-brick">Data Processing</span>
-        <span class="skill-brick">Exploratory Data Analysis</span>
-        <span class="skill-brick">Data Visualization</span>
-        <span class="skill-brick">Feature Selection</span>
-      </div>
-<h3>Machine learning algorithms</h3>
- <div class="skills-bricks">
-        <span class="skill-brick">Linear & Logistic Regression</span>
-        <span class="skill-brick">Decision Trees</span>
-        <span class="skill-brick">Random Forest</span>
-        <span class="skill-brick">K-means clustering</span>
-      </div>
-<h3>ML. Lib. Exp.</h3>
- <div class="skills-bricks">
-        <span class="skill-brick">Scikit-learn</span>
-        <span class="skill-brick">NumPy</span>
-        <span class="skill-brick">OpenCV</span>
-        <span class="skill-brick">NLP.</span>
-        <span class="skill-brick">RNN.</span>
-        <span class="skill-brick">CNN.</span>
-        <span class="skill-brick">TensorFlow</span>
-        <span class="skill-brick">Keras</span>
-         <span class="skill-brick">matplotlib.</span>
-      </div>
- <h3>Tools and Technologies</h3>
- <div class="skills-bricks">
-        <span class="skill-brick">Git/GitHub</span>
-        <span class="skill-brick">Jenkins</span>
-        <span class="skill-brick">Ansible</span>
-        <span class="skill-brick">ngrok</span>
-        <span class="skill-brick">Jupyter Notebook</span>
-        <span class="skill-brick">Google Colab</span>
-        <span class="skill-brick">Streamlit.io</span>
-        <span class="skill-brick">Agile/Scrum/Waterfall</span>
-      </div>
-
-      <div class="button-black-container">
-        <a href="course.html" class="button-black">VIEW SOURCE </a>
-      </div>
-
-    </div>
-
-  </div>
-</section>
-
-<section id="Experience">
-  <div class="resume-container">
-    <h1 class="Black-h1">Professional Experience</h1>
-
-    <div class="resume">
-        <h2 style="color: #0CC0DF" >Software Desgin</h2>
-        <p style="color: #A5A5A5;"> <em>IBM & State University of New York at Oswego (Fall 2022)</em></p>
-        <ul class="custom-dot-list">
-          
-          <li>Contributed to the development team of Postmarker, a collaborative project between State University of New York College at Oswego and IBM (Software design). Played an integral role in designing and implementing a robust solution that that seamlessly retrieves and displays reacted messages from Discord onto a dedicated website, effectively managing and showcasing important work-related messages.</li>
-          <li>Demonstrated exceptional problem-solving and teamwork abilities while working close with IBM stakeholders to gain deep insights into their needs and translate them into actionable technical solutions.</li>
-          <li>Mastered agile and stand-up development methodologies, regularly contributing to scrum meetings and ensuring consistent progress, effectively collaborated with cross-functional teams, gathering and meticulously documenting product requirements, fostering seamless communication and alignment throughout the development lifecycle.</li>
-          <li>Collaborated with over 25 classmates, harnessing our collective expertise to actively contribute to the project and deliver high-quality results within the project timeline, gained valuable hands-on experience in software design and development, honing technical skills and applying coursework knowledge to practical scenarios.</li>
-          
-        </ul>
-      </div>
-
-    <div class="button-wrapper">
-    <div class="button-black-container" style="margin-top: 20px;">
-        <a href="Resources/doc/PatelUmangSE.pdf" class="button-black">VIEW SE RESUME</a>
-    </div>
-    <div class="button-black-container" style="margin-top: 20px;">
-        <a href="Resources/doc/PatelUmangML.pdf" class="button-black">VIEW ML RESUME</a>
-    </div>
-</div>
-
-
-
-  </div>
-</section>
-
-<section id="projects">
-  <div class="project-container">
-  <h1 class="Black-h1">I build & design stuff</h1>
-    <p class="project-text"> Projects, Webapps and experimentals</p>
-
-    <div class="card-grid">
-      <div class="card">
-        <img src="Resources/pics/SKillMatch.png" alt="Image 1">
-        <div class="card-content">
-          <h2>SkillMatch</h2>
-          <a href="https://github.com/umangptl/I-TheIterators" class="card-link">umangptl/I-TheIterators</a>
-        </div>
-      </div>
-
-      <div class="card">
-        <img src="Resources/pics/SIlverThreater.png" alt="Image 2">
-        <div class="card-content">
-          <h2>SilverThreater</h2>
-          <a href="https://github.com/umangptl/SilverTheater" class="card-link">umangptl/SilverTheater</a>
-        </div>
-      </div>
-
-      <div class="card">
-        <img src="Resources/pics/Streamlit.png" alt="Image 3">
-        <div class="card-content">
-          <h2>Telehealth-n-Mental-Health-Dynamics</h2>
-          <a href="https://github.com/umangptl/Telehealth-n-Mental-Health-Dynamics" class="card-link">umangptl/Telehealth-n-Mental-Health-Dynamics</a>
-        </div>
-      </div>
-
-      <div class="card">
-        <img src="Resources/pics/price.jpeg" alt="Image 4">
-        <div class="card-content">
-          <h2>PriceVision</h2>
-          <a href="https://github.com/umangptl/PriceVision" class="card-link">umangptl/PriceVision</a>
-        </div>
-      </div>
-
-      <div class="card">
-        <img src="Resources/pics/Weather.png" alt="Image 5">
-        <div class="card-content">
-          <h2>WeatherCast</h2>
-          <a href="https://github.com/umangptl/WeatherCast" class="card-link">umangptl/WeatherCast</a>
-        </div>
-      </div>
-
-      <div class="card">
-        <img src="Resources/pics/post.png" alt="Image 6">
-        <div class="card-content">
-          <h2>PostMarker</h2>
-          <a href="https://github.com/PavlAvstin/OZ-CSC-480-HCI-521-Fall-2022" class="card-link">umangptl/PostMarker</a>
-        </div>
-      </div>
-
-      <div class="card">
-        <img src="Resources/pics/HWCR.png" alt="Image 7">
-        <div class="card-content">
-          <h2>Character Recognition</h2>
-          <a href="https://github.com/umangptl/ML-Handwritten-Character-Recognition-CNN" class="card-link">umangptl/ML-HWCR</a>
-        </div>
-      </div>
-
-      <div class="card">
-        <img src="Resources/pics/Robot.png" alt="Image 8">
-        <div class="card-content">
-          <h2>RobotRader</h2>
-          <a href="https://github.com/umangptl/RobotRadar" class="card-link">umangptl/RobotRadar</a>
-        </div>
-      </div>
-
-      <div class="card">
-        <img src="Resources/pics/calender.png" alt="Image 9">
-        <div class="card-content">
-          <h2>Calendar-Reminder</h2>
-          <a href="https://github.com/umangptl/GUI-calender-reminder" class="card-link">umangptl/GUI</a>
-        </div>
-      </div>
-
-      </div>
-
-      <div class="button-black-container">
-        <a href="https://github.com/umangptl" class="button-black">VIEW GITHUB</a>
-      </div>
-
-    </div>
-</section>
-
-
+	<script src="script.js"></script>
 </body>
-<footer>
-  <section id="contact">
-    <div class="blank-line"></div>
-    <h1 style="text-align: center; font-size: 30px;">Connect With Me!</h1>
-    <div class="social">
-      <nav>
-        <ul>
-          <li><a href="mailto:umang26patel@gmail.com"><img src="Resources/logo/gmail.png" alt="Gmail"></a></li>
-          <li><a href="https://github.com/umangptl"><img src="Resources/logo/github.png" alt="Github"></a></li>
-          <li><a href="https://www.linkedin.com/in/umangptl/"><img src="Resources/logo/linkedin.png" alt="LinkedIn"></a></li>
-          <li><a href="https://twitter.com/Umang2ptl"><img src="Resources/logo/x.png" alt="x"></a></li>
-          <li><a href="https://www.instagram.com/umangptl/"><img src="Resources/logo/instagram.png" alt="Instagram"></a></li>
-            
-        </ul>
-      </nav>
-    </div>
-
-    <div class="button-white-container" style="margin-bottom: -30px;">
-      <a href="https://www.linkedin.com/in/umangptl/" class="button-white">Send a message!</a>
-    </div>
-
-
-      <p style="padding: 20px; margin-top: 50px"> &copy; Umang Patel 2023. ( last Updated <u>1/29/2024</u> )</p>
-    </section>
-  </footer>
 </html>
