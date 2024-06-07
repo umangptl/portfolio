@@ -173,6 +173,7 @@ button {
 }
 
 .logo-circle img {
+    margin-top: 5%;
     width: 80%; 
     height: 80%;
 }
@@ -207,7 +208,7 @@ button {
 
 .about, .experience {
     padding: 5% 5%;
-    max-width: 1000px;
+    max-width: 80%;
     margin: 0 auto;
 }
 
@@ -248,7 +249,7 @@ button {
 }
 
 .tags {
-    margin-top: 1%;
+    margin-top: 1vw;
 }
 
 .tag {
@@ -274,12 +275,12 @@ button {
 
 .experience-details li {
     font-size: 1.5vw;
-    margin-bottom: 1%;
+    margin-bottom: 1vw;
 }
 
 .projects {
     padding: 5% 5%;
-    max-width: 1200px;
+    max-width: 80%;
     margin: 0 auto;
 }
 
@@ -357,7 +358,7 @@ button {
     position: relative;
 }
 .github::after {
-    content: '\2197';
+    content: '\21D7 ';
     display: inline-block;
     transition: transform 0.2s ease, margin 0.2s ease; 
     margin-left: 0.1vw; 
@@ -387,7 +388,7 @@ button {
 }
 
 .view::after {
-    content: '\2197';
+    content: '\279A';
     display: inline-block;
     transition: transform 0.2s ease, margin 0.2s ease; 
     margin-left: 0.1vw; 
@@ -403,7 +404,7 @@ button {
 
 .contact {
     padding: 5% 5%;
-    max-width: 800px;
+    max-width: 60%;
     margin: 0 auto;
     text-align: center;
 }
@@ -435,6 +436,7 @@ button {
     font-size: 1.5vw;
     padding: 0.8vw;
     background-color: var( --background-color);
+    color: var(--resume-text-color);
     border: 1px solid var(--text-color);
     border-radius: 0.5vw;
     width: 100%;
