@@ -91,4 +91,28 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 });
 
+// script.js
+function checkScreenSize() {
+  var banner = document.getElementById('notification-banner');
+  if (window.innerWidth < 768) { // Threshold for small screens
+    banner.style.display = 'block';
+  } else {
+    banner.style.display = 'none';
+  }
+}
+
+function closeBanner() {
+  var banner = document.getElementById('notification-banner');
+  banner.style.display = 'none';
+}
+
+// Check screen size on page load
+window.onload = checkScreenSize;
+
+// Check screen size on window resize
+window.onresize = checkScreenSize;
+
+// Add event listener to close button
+document.getElementById('close-banner').addEventListener('click', closeBanner);
+
 

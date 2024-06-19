@@ -344,7 +344,7 @@ button {
     padding: 0.5vw 1vw;
     border-radius: 1vw;
     font-size: 0.8vw;
-    margin-bottom: 1vw;
+    margin-bottom: 0.2vw;
 }
 
 .github {
@@ -526,5 +526,35 @@ button {
 
 .all-projects a:hover{
     color: #a9a9a9;
+}
+
+/* styles.css */
+.notification {
+  display: none; /* Hidden by default */
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #ffcc00;
+  color: black;
+  text-align: center;
+  padding: 1vw;
+  font-size: 1.8vw;
+}
+
+.notification .close-btn {
+  background: none;
+  border: none;
+  font-size: 2.5vw;
+  font-weight: bold;
+  color: black;
+  cursor: pointer;
+  float: right;
+  margin-right: 2vw;
+}
+
+@media screen and (max-width: 768px) {
+  .notification {
+    display: block; /* Show the notification on small screens */
+  }
 }
 
