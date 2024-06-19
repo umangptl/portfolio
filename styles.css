@@ -353,7 +353,6 @@ button {
     font-size: 0.99vw;
     text-decoration: none;
     color: var(--view-full-resume-color);
-    margin-left: 3vw;
     margin-top: 0.5vw;
     position: relative;
 }
@@ -361,14 +360,13 @@ button {
     content: '\21D7 ';
     display: inline-block;
     transition: transform 0.2s ease, margin 0.2s ease; 
-    margin-left: 0.1vw; 
     position: relative;
     top: 0.1vw; 
 }
 
 .github:hover::after {
     transform: translate(0.2vw, -0.2vw); 
-    margin-left: 0.2vw; 
+    margin-left: 0.1vw; 
     top: 0; 
 }
 
