@@ -1,13 +1,11 @@
 const lightIcon = document.getElementById("light-icon");
 const darkIcon = document.getElementById("dark-icon");
 
-// Check if dark mode is preferred
+
 const darkModeMediaQuery = window.matchMedia("(prefers-color-scheme: dark)");
 
-// Get dark-mode from localStorage or use the value from the media query
 let darkMode = localStorage.getItem("dark-mode") === 'true' || darkModeMediaQuery.matches;
 
-// Set dark-mode class on body if darkMode is true and set icon
 if (darkMode) {
     document.body.classList.add("dark-mode");
     lightIcon.style.display = "block";
@@ -17,7 +15,6 @@ if (darkMode) {
     darkIcon.style.display = "block";
 }
 
-// Update on OS dark mode change
 darkModeMediaQuery.addEventListener("change", (e) => {
     if (e.matches) {
         darkMode = true;
@@ -35,7 +32,6 @@ darkModeMediaQuery.addEventListener("change", (e) => {
     }
 });
 
-// Toggle dark mode on button click
 function toggleDarkMode() {
     // Toggle darkMode variable
     darkMode = !darkMode;
@@ -91,10 +87,9 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 });
 
-// script.js
 function checkScreenSize() {
   var banner = document.getElementById('notification-banner');
-  if (window.innerWidth < 768) { // Threshold for small screens
+  if (window.innerWidth < 768) { 
     banner.style.display = 'block';
   } else {
     banner.style.display = 'none';
@@ -106,13 +101,10 @@ function closeBanner() {
   banner.style.display = 'none';
 }
 
-// Check screen size on page load
 window.onload = checkScreenSize;
 
-// Check screen size on window resize
 window.onresize = checkScreenSize;
 
-// Add event listener to close button
 document.getElementById('close-banner').addEventListener('click', closeBanner);
 
 

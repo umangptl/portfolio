@@ -158,6 +158,7 @@ button {
     display: flex;
     justify-content: center;
     margin-top: 3vw;
+    margin-bottom: 3vw;
 }
 
 .logo-circle {
@@ -217,7 +218,7 @@ button {
     margin-bottom: 2vw;
 }
 
-.about p, .experience p {
+.about p, .experience p{
     font-size: 1.5vw;
     line-height: 1.6;
     margin-bottom: 1.5vw;
@@ -248,32 +249,7 @@ button {
     margin: 0;
 }
 
-.tags {
-    margin-top: 1vw;
-}
-
-.tag {
-    display: inline-block;
-    background-color: var(--tag-bg-color);
-    color: var(--tag-text-color);
-    padding: 0.5vw 1vw;
-    border-radius: 1vw;
-    font-size: 1vw;
-    margin-right: 0.5vw;
-}
-
-.experience-date-location p {
-    font-size: 1.5vw;
-    margin: 0;
-    text-align: right;
-}
-
-.experience-details {
-    list-style-type: disc;
-    padding-left: 2vw;
-}
-
-.experience-details li {
+.experience-details p {
     font-size: 1.5vw;
     margin-bottom: 1vw;
 }
@@ -339,12 +315,12 @@ button {
 
 .project-tags {
     display: inline-block;
-    background-color: var(--tag-bg-color);
-    color: var(--tag-text-color);
+    color: var(--shadow-color);
     padding: 0.5vw 1vw;
     border-radius: 1vw;
     font-size: 0.8vw;
     margin-bottom: 0.2vw;
+    border: 0.1vw solid var(--shadow-color)
 }
 
 .github {
@@ -412,6 +388,13 @@ button {
     margin-bottom: 2vw;
 }
 
+.contact p {
+    font-size: 1.4vw;
+    line-height: 1.6;
+    margin-bottom: 1.5vw;
+    opacity: 0.8;
+}
+
 .contact-form {
     display: flex;
     flex-direction: column;
@@ -471,7 +454,6 @@ button {
 }
 
 .footer-text {
-    margin-top: 2vw;
     font-size: 1.5vw;
 }
 
@@ -526,9 +508,8 @@ button {
     color: #a9a9a9;
 }
 
-/* styles.css */
 .notification {
-  display: none; /* Hidden by default */
+  display: none; 
   position: fixed;
   top: 0;
   width: 100%;
@@ -552,7 +533,7 @@ button {
 
 @media screen and (max-width: 768px) {
   .notification {
-    display: block; /* Show the notification on small screens */
+    display: block;
   }
 }
 
