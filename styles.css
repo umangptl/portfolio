@@ -63,6 +63,11 @@ header {
 .nav-right {
     display: flex;
     align-items: center;
+    position: fixed;
+    right: 2%;
+    top: 6%;
+    z-index: 1000;
+
 }
 
 .resume-btn {
