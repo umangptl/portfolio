@@ -3,38 +3,60 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Umang Patel</title>
+	<meta name="description" content="Umang Patel - Software Engineer specializing in AI/ML, Full-Stack Development, and Cloud Technologies. Portfolio showcasing innovative projects and professional experience.">
+	<meta name="keywords" content="Software Engineer, AI, Machine Learning, Full Stack Developer, React, Python, AWS, Portfolio">
+	<meta name="author" content="Umang Patel">
+	
+	<!-- Open Graph / Social Media -->
+	<meta property="og:type" content="website">
+	<meta property="og:title" content="Umang Patel - Software Engineer Portfolio">
+	<meta property="og:description" content="Software Engineer specializing in AI/ML and innovative software solutions">
+	<meta property="og:url" content="https://umangptl.github.io">
+	
+	<!-- Twitter Card -->
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:title" content="Umang Patel - Software Engineer">
+	<meta name="twitter:description" content="Building innovative software solutions with AI/ML">
+	
+	<title>Umang Patel - Software Engineer | AI & Full-Stack Developer</title>
+	
+	<!-- Favicon -->
+	<link rel="icon" href="Resources/logo/title.png" type="image/x-icon">
+	
+	<!-- Stylesheets -->
 	<link rel="stylesheet" href="styles.css">
-	<link rel="icon" href="Resources/logo/title.png" type="image/x-icon" >
+	
+	<!-- Google Fonts -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+	
+	<!-- Google Analytics -->
 	<script async src="https://www.googletagmanager.com/gtag/js?id=G-NNVLD5333R"></script>
 	<script>
 		window.dataLayer = window.dataLayer || [];
 		function gtag(){dataLayer.push(arguments);}
 		gtag('js', new Date());
-
 		gtag('config', 'G-NNVLD5333R');
 	</script>
 </head>
+
 <body>
-	<div id="notification-banner" class="notification">
-		Please view on a bigger screen for the best experience.
-		<button id="close-banner" class="close-btn">&times;</button>
-	</div>
+	
+	<!-- Header & Navigation -->
 	<header>
-		<nav class="navbar">
-			<div class="logo">&lt; Umang <br>&nbsp Patel /&gt;</div>
+		<nav class="navbar" role="navigation" aria-label="Main navigation">
+			<div class="logo" aria-label="Umang Patel">&lt; Umang <br>&nbsp Patel /&gt;</div>
 			<ul class="nav-links">
 				<li><a href="#home" class="active">Home</a></li>
 				<li><a href="#about">About</a></li>
+				<li><a href="#skills">Skills</a></li>
 				<li><a href="#experience">Experience</a></li>
 				<li><a href="#projects">Projects</a></li>
 				<li><a href="#contact">Contact</a></li>
 			</ul>
 			<div class="nav-right">
-				<!--
-				<a href="Resources/doc/Patel-Umang.pdf" target="_blank" style="text-decoration: none;"> <button class="resume-btn">RESUME</button> </a> -->
-
-				<button onclick="toggleDarkMode()">
+				<button onclick="toggleDarkMode()" aria-label="Toggle dark mode">
 					<svg width="30" height="30" id="light-icon">
 						<circle cx="15" cy="15" r="6" fill="currentColor" />
 						<line
@@ -69,19 +91,25 @@
 		</nav>
 		<div class="line-1"></div>
 	</header>
-	<div class="dot-nav">
+	
+	<!-- Dot Navigation -->
+	<div class="dot-nav" role="navigation" aria-label="Section navigation">
 		<div class="dot" data-target="home"></div>
 		<div class="dot" data-target="about"></div>
+		<div class="dot" data-target="skills"></div>
 		<div class="dot" data-target="experience"></div>
 		<div class="dot" data-target="projects"></div>
 		<div class="dot" data-target="contact"></div>
 	</div>
 
+	<!-- Hero Section -->
 	<section id="home" class="home">
 		<div class="hero-content">
 			<div class="text-content">
-				<h1>Hi, I'm Umang Patel. <span class="wave">👋</span></h1>
-				<p>I'm a Software Engineer, I love building innovative and efficient software solutions to power the future. ⚡</p>
+				<p class="greeting">Hi, I'm</p>
+				<h1 class="gradient-text-animated">Umang Patel <span class="wave">👋</span></h1>
+				<h2 class="subtitle">Software engineer turning AI into reliable products</h2>
+				<p class="tagline">Full-stack + ML to ship, scale, and measure impact across the stack. ⚡</p>
 				<div class="hero-logos">
 					<div class="logo-circle">
 						<a href="mailto:umang26patel@gmail.com"><img src="Resources/logo/gmail.png" alt="Logo 1"></a>
@@ -109,21 +137,105 @@
 		</div>
 	</section>
 
+	<!-- About Section -->
 	<section id="about" class="about">
-		<h2>About Me</h2>
-		<p>The first time I saw a computer was at my father’s workplace. I was young and curious about how these machines worked. Fast forward to today, <strong>I am pursuing my master’s degree</strong> in Software Engineering at San Jose, continuing to explore and fulfill my curiosity. I’ve had the privilege of building software programs <strong>for personal projects</strong>, While learning at <strong> universities,</strong> and an IT service company</strong> while interning.</p>
-		<p>My main focus these days is integrating AI in Software Systems. I thrive at the intersection of design and engineering, creating innovative solutions that are both functional and beautifully designed, harnessing the power of Artificial Intelligence.</p>
-		<p><strong>When I’m not glued to my computer,</strong>  you’ll likely find me crushing weights at the gym, fueling my adrenaline with Formula 1 races, kicking back with friends, or diving into the latest binge-worthy series on Netflix</p>
+		<h2 class="section-title">About Me</h2>
+		<p>I am a software engineer focused on building AI driven products that are trustworthy, measurable, and user friendly. I recently <strong> completed my Master's degree in Software Engineering at San Jose State University </strong> and I am <strong> currently working with SchoolSafe Zone </strong>to help create distraction free learning environments through focused software systems.</p>
+
+		<p>My work sits at the point <strong>where AI meets product engineering, covering model integration, system design, user experience, and reliable deployment.</strong> I enjoy shaping ideas into tools that feel useful, fast, and meaningful in real life.</p>
+
+		<p><strong>When I'm not coding,</strong> you might find me lifting 🏋️‍♂️, watching Formula 1 🏎️, kicking back with friends, exploring new food place 🌮 or  diving into the latest binge-worthy series on Netflix 🖥️.</p>
+
 	</section>
 
+	<!-- Skills Section -->
+	<section id="skills" class="skills">
+		<h2 class="section-title">Technical Skills</h2>
+		<div class="skills-container">
+			<div class="skill-category card card-hover-lift">
+				<h3>💻 Languages</h3>
+				<div class="skill-tags">
+					<span class="skill-tag tag tag-gradient">Python</span>
+					<span class="skill-tag tag tag-gradient">Java</span>
+					<span class="skill-tag tag tag-gradient">C & C++</span>
+					<span class="skill-tag tag tag-gradient">Kotlin</span>
+					<span class="skill-tag tag tag-gradient">Objective-C</span>
+					<span class="skill-tag tag tag-gradient">Andriod(Java)</span>
+					<span class="skill-tag tag tag-gradient">IOS(Swift/C)</span>
+					<span class="skill-tag tag tag-gradient">SQL</span>
+					<span class="skill-tag tag tag-gradient">Scala</span>
+					<span class="skill-tag tag tag-gradient">Clojure</span>
+				</div>
+			</div>
+			<div class="skill-category card card-hover-lift">
+				<h3>🌐 Frontend</h3>
+				<div class="skill-tags">
+					<span class="skill-tag tag tag-gradient">HTML/CSS</span>
+					<span class="skill-tag tag tag-gradient">JavaScript</span>
+					<span class="skill-tag tag tag-gradient">TypeScript</span>
+					<span class="skill-tag tag tag-gradient">React.js</span>
+					<span class="skill-tag tag tag-gradient">Node.js</span>
+					<span class="skill-tag tag tag-gradient">Vue.js</span>
+					<span class="skill-tag tag tag-gradient">UI/UX</span>
+				</div>
+			</div>
+			<div class="skill-category card card-hover-lift">
+				<h3>⚙️ Backend</h3>
+				<div class="skill-tags">
+					<span class="skill-tag tag tag-gradient">Flask</span>
+					<span class="skill-tag tag tag-gradient">FastAPI</span>
+					<span class="skill-tag tag tag-gradient">Spring Boot</span>
+					<span class="skill-tag tag tag-gradient">RESTful APIs</span>
+					<span class="skill-tag tag tag-gradient">Microservices</span>
+				</div>
+			</div>
+			<div class="skill-category card card-hover-lift">
+				<h3>🤖 AI/ML</h3>
+				<div class="skill-tags">
+					<span class="skill-tag tag tag-gradient">TensorFlow</span>
+					<span class="skill-tag tag tag-gradient">PyTorch</span>
+					<span class="skill-tag tag tag-gradient">LSTM</span>
+					<span class="skill-tag tag tag-gradient">Neural Networks</span>
+					<span class="skill-tag tag tag-gradient">Computer Vision</span>
+					<span class="skill-tag tag tag-gradient">LLM Integration</span>
+					<span class="skill-tag tag tag-gradient">CoreML</span>
+					<span class="skill-tag tag tag-gradient">Predictive Analytics</span>
+				</div>
+			</div>
+			<div class="skill-category card card-hover-lift">
+				<h3>☁️ Cloud & DevOps</h3>
+				<div class="skill-tags">
+					<span class="skill-tag tag tag-gradient">AWS</span>
+					<span class="skill-tag tag tag-gradient">Azure</span>
+					<span class="skill-tag tag tag-gradient">Google Cloud</span>
+					<span class="skill-tag tag tag-gradient">Docker</span>
+					<span class="skill-tag tag tag-gradient">Kubernetes</span>
+					<span class="skill-tag tag tag-gradient">CI/CD</span>
+					<span class="skill-tag tag tag-gradient">Jenkins</span>
+					<span class="skill-tag tag tag-gradient">Ansible</span>
+					<span class="skill-tag tag tag-gradient">Git</span>
+				</div>
+			</div>
+			<div class="skill-category card card-hover-lift">
+				<h3>🗄️ Databases</h3>
+				<div class="skill-tags">
+					<span class="skill-tag tag tag-gradient">MongoDB</span>
+					<span class="skill-tag tag tag-gradient">MySQL</span>
+					<span class="skill-tag tag tag-gradient">PostgreSQL</span>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Experience Section -->
 	<section id="experience" class="experience">
 
-		<h2>Research & Publications</h2>
-		<div class="experience-item">
+		<h2 class="section-title">Research & Publications</h2>
+		<div class="experience-item card card-hover-slide">
 			<div class="experience-header">
 				<div>
 					<h3>IEEE CISOSE 2024 Presentation</h3>
-					<p>IEEE International Conference on Artificial Intelligence Testing</p>
+					<p>IEEE International Conference on Artificial Intelligence Testing (Shanghai, China)</p>
 					<p>JULY 2024</p>
 				</div>
 			</div>
@@ -132,20 +244,20 @@
 			</p>
 		</div>
 
-		<h2>Experience</h2>
-		<div class="experience-item">
+		<h2 class="section-title">Experience</h2>
+		<div class="experience-item card card-hover-slide">
 
 			<div class="experience-header">
 				<div>
-					<h3>Software Engineer (Volunteer)</h3>
+					<h3>Software Engineer</h3>
 					<p>SchoolSafe Zone Inc.</p>
 					<p>Jul 2025 – Present</p>
 				</div>
 			</div>
 			<p class="experience-details">
-				   &nbsp; ●  Collaborated with a cross-functional team of engineers and stakeholders to deliver a working MVP within 3 months, improving project velocity by 40%.<br>
-				   &nbsp; ●  Deployed cross-platform features (iOS, Android, Web), ensuring consistency across 3 different environments and reducing duplicate development effort.<br>
-				  &nbsp; ●  Contributed to technical documentation and feasibility assessments, enabling the team to align stakeholder goals with practical engineering trade-offs.
+				   &nbsp; ● Delivered a functional prototype in about 10 weeks, moving the product from early concept to a usable demo for internal stakeholders.<br>
+				   &nbsp; ● Set up modular backend components and containerized workflows, reducing rebuild and redeploy time from around 3 minutes to about 20 seconds.<br>
+				  &nbsp; ● Maintained weekly delivery rhythm through contributor shifts, averaging 5 to 7 features or fixes per week to keep product momentum steady.
 			</p>
 			<div class="line-1"></div><br>
 			<div class="experience-header">
@@ -156,10 +268,9 @@
 				</div>
 			</div>
 			<p class="experience-details">
-				   &nbsp; ●  Partnered with Adobe engineers and mentors on a real-world AI/ML application focused on user experience personalization.<br>
-				   &nbsp; ●  Designed and implemented scalable web components using React.js and Node.js, resulting in a 25% reduction in page load time.<br>
-				  &nbsp; ●  Presented deliverables and technical demos to Adobe stakeholders, receiving commendation for UX
-refinement and high-quality engineering practices.
+				   &nbsp; ● Partnered with Adobe engineers and mentors on a real-world AI/ML application focused on user experience personalization.<br>
+				   &nbsp; ● Designed and implemented scalable web components using React.js and Node.js, resulting in a 25% reduction in page load time.<br>
+				   &nbsp; ● Presented deliverables and technical demos to Adobe stakeholders, receiving commendation for UX refinement and high-quality engineering practices.
 			</p>
 
 			<div class="line-1"></div><br>
@@ -171,114 +282,114 @@ refinement and high-quality engineering practices.
 				</div>
 			</div>
 			<p class="experience-details">
-				   &nbsp; ●  Engineered an application collecting and analyzing platform communication data, facilitating communitydriven development insights, which improved engagement metrics by 30%. <br>
-				   &nbsp; ●  Boosted project workflow speed by 20% by precisely translating IBM stakeholder needs into microservicebased designs, supporting scalable, modular development. <br> 
+				   &nbsp; ● Engineered an application analyzing platform communication data, facilitating community driven development insights, which improved engagement metrics by 30%. <br>
+				   &nbsp; ● Boosted project workflow speed by 20% by precisely translating IBM stakeholder needs into microservicebased designs, supporting scalable, modular development <br> 
 				   &nbsp; ● Acquired proficiency in IBM technologies and agile methods, leading to consistent 100% on-time delivery of high-quality results with a 25% boost.
 			</p>
 		</div>
 		<!-- <a href="Resources/doc/Patel-Umang.pdf" class="view">View Full Resume</a> -->
-
 	</section>
 
+	<!-- Projects Section -->
 	<section id="projects" class="projects">
-		<h2>Projects</h2>
+		<h2 class="section-title">Projects</h2>
 		<h3>AI-Powered Systems: Livestock Management and Predicting Bitcoin & Markets</h3>
 		<div class="projects-container">
 
-			<div class="project-item">
+			<div class="project-item card card-hover-lift">
 				<img src="Resources/picture/project(1).png" alt="Smart cloud">
 				<div class="project-details">
-					<h4>Smart Cloud Platform - Livestock Farms</h4>
-					<p>Developed cloud technology to enable real-time monitoring, predictive analytics, and smarter decision-making for enhanced livestock management and productivity.</p>
+					<h4>Intelligent Cloud Platform for Livestock Analytics</h4>
+					<p>Real-time monitoring and predictive analytics for livestock, driving smarter decisions and higher farm productivity.</p>
 					<div class="project-tag">
-						<span class="project-tags">Python</span>
-						<span class="project-tags">AWS</span>
-						<span class="project-tags">Computer Vision</span>
-						<span class="project-tags">Predictive Analytics</span>
-						<span class="project-tags">React</span>
+						<span class="project-tags tag tag-outline">Python</span>
+						<span class="project-tags tag tag-outline">AWS</span>
+						<span class="project-tags tag tag-outline">Computer Vision</span>
+						<span class="project-tags tag tag-outline">Predictive Analytics</span>
+						<span class="project-tags tag tag-outline">React</span>
 					</div>
 					<a href="https://github.com/umangptl/Smart-Farming-Platform" class="github">/umangptl/Smart-Farming-Platform</a>
 				</div>
 			</div>
 
-			<div class="project-item">
+			<div class="project-item card card-hover-lift">
 				<img src="Resources/picture/project(2).png" alt="BitSmart Console - Bitcoin Prediction">
 				<div class="project-details">
-					<h4>PostPulse — AI-Powered Social Media Post Generator</h4>
-					<p> AI-powered social media post generator built with Python FastAPI, Gemini 2.0 Flash API, and a clean HTML/JS frontend.</p>
+					<h4> AI-Powered Social Media Post Generator</h4>
+					<p>Instantly drafts on-brand social posts using Gemini 2.0 Flash API with a Python FastAPI backend and clean HTML/JS frontend.</p>
 					<div class="project-tag">
-						<span class="project-tags">Python</span>
-						<span class="project-tags">LLM</span>
-						<span class="project-tags">FastAPI</span>
-						<span class="project-tags">GEMINI-AI</span>
-						<span class="project-tags">Javascript </span>
+						<span class="project-tags tag tag-outline">Python</span>
+						<span class="project-tags tag tag-outline">LLM</span>
+						<span class="project-tags tag tag-outline">FastAPI</span>
+						<span class="project-tags tag tag-outline">Gemini AI</span>
+						<span class="project-tags tag tag-outline">JavaScript</span>
 					</div>
 					<a href="https://github.com/umangptl/PostPulse" class="github">/umangptl/PostPulse</a>
 				</div>
 			</div>
 
-			<div class="project-item">
+			<div class="project-item card card-hover-lift">
 				<img src="Resources/picture/project(3).jpeg" alt="PriceVision - AI stock prediction web">
 				<div class="project-details">
-					<h4>PriceVision - AI Stock Prediction Web</h4>
-					<p>Created a full-stack machine learning web app, leveraging LSTM for stock price prediction and integrating news updates using news API.</p>
+					<h4>Intelligent Stock Prediction Web</h4>
+					<p>Full-stack ML app using LSTM to forecast stock prices with live news integration to contextualize trends.</p>
 					<div class="project-tag">
-						<span class="project-tags">Python</span>
-						<span class="project-tags">Neural Networks</span>
-						<span class="project-tags">LSTM</span>
-						<span class="project-tags">React</span>
-						<span class="project-tags">Flask</span>
-						<span class="project-tags">API Integration</span>
+						<span class="project-tags tag tag-outline">Python</span>
+						<span class="project-tags tag tag-outline">Neural Networks</span>
+						<span class="project-tags tag tag-outline">LSTM</span>
+						<span class="project-tags tag tag-outline">React</span>
+						<span class="project-tags tag tag-outline">Flask</span>
+						<span class="project-tags tag tag-outline">API Integration</span>
 					</div>
 					<a href="https://github.com/umangptl/PriceVision" class="github">/umangptl/PriceVision</a>
 				</div>
 			</div>
 		</div>
 
-		<h3>Mobile and Robotics: Andriod, IOS and GoPiGo</h3>
+		<h3>Mobile and Robotics: Android, iOS and GoPiGo</h3>
 
 		<div class="projects-container">
-			<div class="project-item">
+			<div class="project-item card card-hover-lift">
 				<img src="Resources/picture/project(4).png" alt="Bite-n-Sip">
 				<div class="project-details">
-					<h4>Bite-n-Sip - Andriod App</h4>
-					<p> Designed a mobile app to help users stay hydrated suggesting personalized water intake tracking, recipe suggestions, and an interactive AI-powered assistant.</p>
+					<h4>Bite-n-Sip - Android App</h4>
+					<p>Android app that keeps users hydrated with personalized intake tracking, recipe suggestions, and an interactive AI assistant.</p>
 					<div class="project-tag">
-						<span class="project-tags">Java/Kotlin</span>
-						<span class="project-tags">Android</span>
-						<span class="project-tags">LLM interface</span>
-						<span class="project-tags">Push Notifications</span>
-						<span class="project-tags">User Interface (UI)</span>
+						<span class="project-tags tag tag-outline">Java/Kotlin</span>
+						<span class="project-tags tag tag-outline">Android</span>
+						<span class="project-tags tag tag-outline">LLM Interface</span>
+						<span class="project-tags tag tag-outline">Push Notifications</span>
+						<span class="project-tags tag tag-outline">User Interface (UI)</span>
 					</div>
 					<a href="https://github.com/umangptl/Bite-n-Sip" class="github">/umangptl/Bite-n-Sip</a>
 				</div>
 			</div>
-			<div class="project-item">
+			<div class="project-item card card-hover-lift">
 				<img src="Resources/picture/project(5).png" alt="Character Recognition - IOS APP">
 				<div class="project-details">
 					<h4>Character Recognition - IOS APP</h4>
-					<p>Developed an iOS app for handwritten number recognition using CoreML and Vision frameworks with a trained MNIST model.</p>
+					<p>iOS app for handwritten digit recognition using CoreML and Vision frameworks with a trained MNIST model.</p>
 					<div class="project-tag">
-						<span class="project-tags">Objective-C</span>
-						<span class="project-tags">CoreML</span>
-						<span class="project-tags">Vision Framework</span>
-						<span class="project-tags">iOS Development</span>
-						<span class="project-tags">Machine Learning</span>
+						<span class="project-tags tag tag-outline">Objective-C</span>
+						<span class="project-tags tag tag-outline">CoreML</span>
+						<span class="project-tags tag tag-outline">Vision Framework</span>
+						<span class="project-tags tag tag-outline">iOS Development</span>
+						<span class="project-tags tag tag-outline">Machine Learning</span>
 					</div>
 					<a href="https://github.com/umangptl/App-Handwritten-Number-Recognition" class="github">/umangptl/App-Handwritten-Recognition</a>
 				</div>
 			</div>
-			<div class="project-item">
+			<div class="project-item card card-hover-lift">
 				<img src="Resources/picture/project(6).png" alt="Robot Radar - GoPiGo">
 				<div class="project-details">
 					<h4>Robot Radar - GoPiGo</h4>
-					<p>Developed an obstacle detection and visualization app for Raspberry Pi robots using  sensors, for navigation and obstacle avoidance capabilities.</p>
+					<p>Obstacle detection and visualization for Raspberry Pi robots using sensors to improve navigation and obstacle avoidance.</p>
 					<div class="project-tag">
-						<span class="project-tags">Python</span>
-						<span class="project-tags">Ultrasonic Sensors</span>
-						<span class="project-tags">Raspberry Pi</span>
-						<span class="project-tags">Robotics</span>
-						<span class="project-tags">Obstacle Detection</span>
+						<span class="project-tags tag tag-outline">Python</span>
+						<span class="project-tags tag tag-outline">Ultrasonic Sensors</span>
+						<span class="project-tags tag tag-outline">Raspberry Pi</span>
+						<span class="project-tags tag tag-outline">Robotics</span>
+						<span class="project-tags tag tag-outline">Obstacle Detection</span>
 					</div>
 					<a href="https://github.com/umangptl/RobotRadar" class="github">/umangptl/RobotRadar</a>
 				</div>
@@ -288,64 +399,66 @@ refinement and high-quality engineering practices.
 		<h3>Smart Systems: Tickets, Applications, and Social Platforms</h3>
 
 		<div class="projects-container">
-			<div class="project-item">
+			<div class="project-item card card-hover-lift">
 				<img src="Resources/picture/project(8).png" alt="SilverTheater - Ticket booking sys">
 				<div class="project-details">
-					<h4>SilverTheater - Ticket booking Sys</h4>
-					<p>Developed comprehensive ticket booking system  to streamline the process of reserving seats for movies. This application features both user and admin functionalities.</p>
+					<h4>Ticket booking System</h4>
+					<p>Ticket booking system that streamlines movie seat reservations with dedicated user and admin flows.</p>
 					<div class="project-tag">
-						<span class="project-tags">Java</span>
-						<span class="project-tags">Spring Boot</span>
-						<span class="project-tags">HTML/CSS</span>
-						<span class="project-tags">MySQL</span>
-						<span class="project-tags">JavaScript</span>
-						<span class="project-tags">CI/CD</span>
+						<span class="project-tags tag tag-outline">Java</span>
+						<span class="project-tags tag tag-outline">Spring Boot</span>
+						<span class="project-tags tag tag-outline">HTML/CSS</span>
+						<span class="project-tags tag tag-outline">MySQL</span>
+						<span class="project-tags tag tag-outline">JavaScript</span>
+						<span class="project-tags tag tag-outline">CI/CD</span>
 					</div>
 					<a href="https://github.com/umangptl/SilverTheater" class="github">/umangptl/SilverTheater</a>
 				</div>
 			</div>
-			<div class="project-item">
+			<div class="project-item card card-hover-lift">
 				<img src="Resources/picture/project(7).png" alt="SkillMatch - Application Tracking Sys">
 				<div class="project-details">
-					<h4>SkillMatch - Application Tracking Sys</h4>
-					<p>Orchestrated end-to-end development of an enterprise application, a career portal for job seekers and recruiters, incorporating features like job listing management, and analytics</p> 
+					<h4>Application Tracking System</h4>
+					<p>Career portal for job seekers and recruiters with job listing management, analytics, and secure authentication.</p> 
 					<div class="project-tag">
-						<span class="project-tags">AWS</span>
-						<span class="project-tags">React.js</span>
-						<span class="project-tags">MongoDB</span>
-						<span class="project-tags">JWT</span>
-						<span class="project-tags">Google SSO</span>
-						<span class="project-tags">RESTful APIs</span>
-						<span class="project-tags">Jenkins</span>
+						<span class="project-tags tag tag-outline">AWS</span>
+						<span class="project-tags tag tag-outline">React.js</span>
+						<span class="project-tags tag tag-outline">MongoDB</span>
+						<span class="project-tags tag tag-outline">JWT</span>
+						<span class="project-tags tag tag-outline">Google SSO</span>
+						<span class="project-tags tag tag-outline">RESTful APIs</span>
+						<span class="project-tags tag tag-outline">Jenkins</span>
 					</div>
 					<a href="https://github.com/umangptl/I-TheIterators" class="github">/umangptl/SkillMatch</a>
 				</div>
 			</div>
-			<div class="project-item">
+			<div class="project-item card card-hover-lift">
 				<img src="Resources/picture/project(9).png" alt="PostMaker - Discord Webpage">
 				<div class="project-details">
-					<h4>PostMaker - Discord Webpage</h4>
-					<p>Collaborated with mutiple teams to engineer a software app for retrieving and displaying pinned messages from Discord onto a dedicated website, enhancing user experience and content access.</p>
+					<h4>Internal Messaging System</h4>
+					<p>Built with multiple teams to retrieve and display pinned messages on a dedicated website, improving content access.</p>
 					<div class="project-tag">
-						<span class="project-tags">Java</span>
-						<span class="project-tags">React</span>
-						<span class="project-tags">Docker</span>
-						<span class="project-tags">Discord API</span>
-						<span class="project-tags">Open Liberty</span>
-						<span class="project-tags">Requirement Analysis</span>
+						<span class="project-tags tag tag-outline">Java</span>
+						<span class="project-tags tag tag-outline">React</span>
+						<span class="project-tags tag tag-outline">Docker</span>
+						<span class="project-tags tag tag-outline">Discord API</span>
+						<span class="project-tags tag tag-outline">Open Liberty</span>
+						<span class="project-tags tag tag-outline">Requirement Analysis</span>
 					</div>
 					<a href="https://github.com/umangptl/OZ-CSC-480-HCI-521-Fall-2022" class="github">/umangptl/PostMaker</a>
 				</div>
 			</div>
 		</div>
 
-		<a href="Full-Archive.html" class="view">View Full Project Archive</a>
+		<a href="Full-Archive.html" class="view btn btn-gradient">View Full Project Archive</a>
 	</section>
 
+	<!-- Contact Section -->
 	<section id="contact" class="contact">
 		<h2>Get In Touch!</h2>
-		<p> I'd love to connect and discuss potential collaborations, share insights, or explore opportunities. Feel free to reach out! </p>
-		<form class="contact-form" action="https://formspree.io/f/xrgnwwlr" method="POST">
+		<p> I'd love to connect and discuss potential collaborations, share insights, or explore opportunities. 
+		Feel free to reach out! </p>
+		<form class="contact-form card" action="https://formspree.io/f/xrgnwwlr" method="POST">
 			<div class="form-group">
 				<label for="first-name">First Name</label>
 				<input type="text" id="first-name" name="first-name" placeholder="John">
@@ -356,16 +469,17 @@ refinement and high-quality engineering practices.
 			</div>
 			<div class="form-group">
 				<label for="email">Email Address</label>
-				<input type="email" id="email" name="email" placeholder="Johndoe@email.net">
+				<input type="email" id="email" name="email" placeholder="john.doe@email.com">
 			</div>
 			<div class="form-group">
 				<label for="message">Your Message</label>
 				<textarea id="message" name="message" placeholder="Write your message..."></textarea>
 			</div>
-			<button type="submit" class="submit-btn">Submit</button>
+			<button type="submit" class="submit-btn btn btn-gradient">Submit</button>
 		</form>
 	</section>
 
+	<!-- Footer -->
 	<footer class="footer">
 		<div class="line-1"></div>
 		<div class="hero-logos">
@@ -388,9 +502,9 @@ refinement and high-quality engineering practices.
 		<div class="footer-text">⚡ Powered by Formspree & GitHub</div>
 		<div class="footer-text">🏗️ Developed & Designed by Umang Patel ✨</div>
 		<div class="footer-text"> © 2025 &lt; Umang Patel /&gt; </div>
-		
 	</footer>
 
+	<!-- JavaScript -->
 	<script src="script.js"></script>
 </body>
 </html>

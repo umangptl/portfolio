@@ -1,29 +1,327 @@
+/**
+ * Portfolio Website - Main Stylesheet
+ * Author: Umang Patel
+ * Description: Professional styling with modern design system
+ */
+
+/* ==========================================
+   CSS CUSTOM PROPERTIES (Design Tokens)
+   ========================================== */
+
 :root {
-    --background-color: white;
-    --text-color: black;
-    --nav-link-color: black;
-    --nav-link-hover-color: black;
-    --resume-btn-bg-color: black;
+    /* Colors */
+    --background-color: #ffffff;
+    --text-color: #1a1a1a;
+    --nav-link-color: #2c3e50;
+    --nav-link-hover-color: #3498db;
+    --shadow-color: #e8e8e8;
+    --experience-bg-color: #f8f9fa;
+    
+    /* Gradients */
+    --accent-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    
+    /* Shadows */
+    --card-hover-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    
+    /* Legacy Variables (for compatibility) */
+    --resume-btn-bg-color: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     --resume-btn-text-color: white;
-    --shadow-color: #333;
-    --experience-bg-color: #f5f5f5;
-    --tag-bg-color: black;
+    --tag-bg-color: #667eea;
     --tag-text-color: white;
-    --view-full-resume-color: black;
+    --view-full-resume-color: #667eea;
+}
+
+/* ==========================================
+   BASE STYLES
+   ========================================== */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+html, body {
+    overflow-x: hidden;
+    max-width: 100%;
 }
 
 body {
-    font-family: 'Arial', sans-serif;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
     background-color: var(--background-color);
+    background-image: 
+        radial-gradient(circle at 20% 50%, rgba(102, 126, 234, 0.05) 0%, transparent 50%),
+        radial-gradient(circle at 80% 80%, rgba(118, 75, 162, 0.05) 0%, transparent 50%);
+    background-attachment: fixed;
     color: var(--text-color);
+    line-height: 1.6;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    animation: fadeIn 0.5s ease-in;
 }
 
+button {
+    all: unset;
+    cursor: pointer;
+}
+
+/* ==========================================
+   DARK MODE
+   ========================================== */
+
+.dark-mode {
+    --background-color: #0a0a0a;
+    --text-color: #e8e8e8;
+    --nav-link-color: #e8e8e8;
+    --nav-link-hover-color: #667eea;
+    --shadow-color: #1a1a1a;
+    --experience-bg-color: #151515;
+}
+
+/* ==========================================
+   ANIMATIONS
+   ========================================== */
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes wave {
+    0%, 100% { transform: rotate(0deg); }
+    10%, 30% { transform: rotate(14deg); }
+    20% { transform: rotate(-8deg); }
+    40%, 100% { transform: rotate(0deg); }
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-20px); }
+}
+
+@keyframes gradientShift {
+    0%, 100% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+}
+
+/* ==========================================
+   REUSABLE UTILITY CLASSES
+   ========================================== */
+
+/* 
+ * UTILITY CLASS SYSTEM
+ * 
+ * This section contains reusable component classes following DRY principles.
+ * Apply these classes to HTML elements to avoid code duplication.
+ * 
+ * USAGE EXAMPLES:
+ * 
+ * Card Components:
+ *   <div class="card card-hover-lift"> - Basic card with lift hover effect
+ *   <div class="card card-hover-slide"> - Card that slides on hover
+ *   <div class="card card-hover-scale"> - Card that scales on hover
+ * 
+ * Gradient Elements:
+ *   <div class="gradient-bg"> - Gradient background
+ *   <h1 class="gradient-text"> - Static gradient text
+ *   <h1 class="gradient-text-animated"> - Animated gradient text
+ * 
+ * Buttons:
+ *   <a class="btn btn-gradient"> - Gradient button with hover effects
+ * 
+ * Tags:
+ *   <span class="tag tag-gradient"> - Filled gradient tag
+ *   <span class="tag tag-outline"> - Outlined tag
+ * 
+ * Section Headers:
+ *   <h2 class="section-title"> - Section heading with underline
+ *   <h2 class="section-title section-title-center"> - Centered section title
+ * 
+ * Links:
+ *   <a class="link-gradient"> - Link with gradient color transition
+ *   <a class="link-gradient link-arrow"> - Link with arrow on hover
+ */
+
+/* Card Components */
+.card {
+    background-color: var(--experience-bg-color);
+    border-radius: 1.5vw;
+    border: 1px solid rgba(102, 126, 234, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.card:hover {
+    box-shadow: var(--card-hover-shadow);
+    border-color: rgba(102, 126, 234, 0.3);
+}
+
+.card-hover-lift:hover {
+    transform: translateY(-10px);
+}
+
+.card-hover-slide:hover {
+    transform: translateX(5px);
+}
+
+.card-hover-scale:hover {
+    transform: scale(1.01);
+}
+
+/* Gradient Components */
+.gradient-bg {
+    background: var(--accent-gradient);
+}
+
+.gradient-text {
+    background: var(--accent-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.gradient-text-animated {
+    background: var(--accent-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: gradientShift 3s ease infinite;
+    background-size: 200% 200%;
+}
+
+/* Button Components */
+.btn {
+    display: inline-block;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 1vw;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+}
+
+.btn-gradient {
+    background: var(--accent-gradient);
+    color: white;
+    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+}
+
+.btn-gradient:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 25px rgba(102, 126, 234, 0.5);
+}
+
+/* Tag Components */
+.tag {
+    display: inline-block;
+    border-radius: 2vw;
+    font-size: 0.9vw;
+    font-weight: 500;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.tag-gradient {
+    background: var(--accent-gradient);
+    color: white;
+    padding: 0.6vw 1.2vw;
+}
+
+.tag-gradient:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+}
+
+.tag-outline {
+    color: var(--text-color);
+    padding: 0.5vw 1vw;
+    border: 1px solid rgba(102, 126, 234, 0.4);
+    background: rgba(102, 126, 234, 0.05);
+}
+
+/* Section Headers */
+.section-title {
+    font-size: 3vw;
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 700;
+    margin-bottom: 2vw;
+    position: relative;
+    display: inline-block;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: -0.5vw;
+    left: 0;
+    width: 60%;
+    height: 4px;
+    background: var(--accent-gradient);
+    border-radius: 2px;
+}
+
+.section-title-center {
+    text-align: center;
+    display: block;
+}
+
+.section-title-center::after {
+    display: block;
+    width: 100px;
+    margin: 1vw auto 0;
+    left: auto;
+}
+
+/* Link Styles */
+.link-gradient {
+    text-decoration: none;
+    color: #667eea;
+    transition: color 0.3s ease;
+}
+
+.link-gradient:hover {
+    color: #764ba2;
+}
+
+.link-arrow::after {
+    content: ' ↗';
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.link-arrow:hover::after {
+    opacity: 1;
+}
+
+/* ==========================================
+   HEADER & NAVIGATION
+   ========================================== */
+
 header {
-    width: 90%;
-    padding: 1.5vw 5vw;
+    width: 100%;
+    padding: 20px 5%;
+    position: sticky;
+    top: 0;
+    background: var(--background-color);
+    z-index: 999;
+    backdrop-filter: blur(10px);
+    transition: box-shadow 0.3s ease;
+}
+
+header.scrolled {
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.05);
 }
 
 .navbar {
@@ -33,31 +331,55 @@ header {
 }
 
 .logo {
-    font-size: 2vw;
-    margin-bottom: 1vw;
+    font-size: 24px;
+    margin-bottom: 0;
 }
 
 .nav-links {
     display: flex;
     list-style: none;
-    padding: 2vw;
+    padding: 0;
     margin: 0;
     margin-left: auto;
+    gap: 30px;
 }
 
 .nav-links li {
-    margin-left: 2vw;
+    margin-left: 0;
 }
 
 .nav-links a {
     text-decoration: none;
     color: var(--nav-link-color);
-    font-size: 1.2vw;
-    padding-bottom: 0.5vw;
+    font-size: 16px;
+    font-weight: 500;
+    padding-bottom: 5px;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--accent-gradient);
+    transition: width 0.3s ease;
+}
+
+.nav-links a:hover::after,
+.nav-links a.active::after {
+    width: 100%;
+}
+
+.nav-links a.active {
+    color: #667eea;
 }
 
 .nav-links a:hover {
-    border-bottom: 2px solid var(--nav-link-hover-color);
+    color: var(--nav-link-hover-color);
 }
 
 .nav-right {
@@ -65,26 +387,50 @@ header {
     align-items: center;
     position: fixed;
     right: 2%;
-    top: 6%;
+    top: 2%;
     z-index: 1000;
+}
 
+.nav-right button {
+    padding: 0.5vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#light-icon,
+#dark-icon {
+    width: 30px;
+    height: 30px;
 }
 
 .resume-btn {
     padding: 1vw 2vw;
-    background-color: var(--resume-btn-bg-color);
+    background: var(--resume-btn-bg-color);
     color: var(--resume-btn-text-color);
     border: none;
     cursor: pointer;
     font-size: 1vw;
+    font-weight: 600;
     border-radius: 1vw;
     margin-right: 2vw;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+}
+
+.resume-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
 }
 
 button {
     all: unset;
     cursor: pointer;
 }
+
+/* ==========================================
+   DOT NAVIGATION
+   ========================================== */
 
 .dot-nav {
     position: fixed;
@@ -103,25 +449,52 @@ button {
     background-color: var(--nav-link-color);
     border-radius: 50%;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.dot::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background: var(--accent-gradient);
+    opacity: 0;
+    transform: scale(0);
+    transition: all 0.3s ease;
+}
+
+.dot:hover {
+    transform: scale(1.2);
+}
+
+.dot.active::before {
+    opacity: 0.5;
+    transform: scale(1.5);
 }
 
 .dot.active {
-    background-color: #a9a9a9;
+    background: var(--accent-gradient);
+    box-shadow: 0 0 10px rgba(102, 126, 234, 0.5);
 }
 
+/* ==========================================
+   HERO SECTION
+   ========================================== */
+
 .dark-mode {
-    --background-color: black;
-    --text-color: white;
-    --nav-link-color: white;
-    --nav-link-hover-color: white;
-    --resume-btn-bg-color: white;
-    --resume-btn-text-color: black;
-    --shadow-color: #f5f5f5;
-    --experience-bg-color: #333;
-    --tag-bg-color: white;
-    --tag-text-color: black;
-    --view-full-resume-color: white;
+    --background-color: #0a0a0a;
+    --text-color: #e8e8e8;
+    --nav-link-color: #e8e8e8;
+    --nav-link-hover-color: #667eea;
+    --resume-btn-bg-color: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    --resume-btn-text-color: white;
+    --shadow-color: #1a1a1a;
+    --experience-bg-color: #151515;
+    --tag-bg-color: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    --tag-text-color: white;
+    --view-full-resume-color: #667eea;
 }
 
 .hero {
@@ -148,15 +521,56 @@ button {
     text-align: center;
 }
 
-.text-content h1 {
-    font-size: 3.5vw;
-    margin: 0;
+.text-content .greeting {
+    font-size: 1.5vw;
+    color: #667eea;
+    font-weight: 500;
+    margin-bottom: 0.5vw;
+    letter-spacing: 0.05em;
 }
 
-.text-content p {
-    font-size: 1.8vw;
-    text-align: left;
-    color: #888;
+.text-content h1 {
+    font-size: 4vw;
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 700;
+    margin: 0.5vw 0;
+}
+
+@keyframes gradientShift {
+    0%, 100% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+}
+
+.text-content .subtitle {
+    font-size: 2vw;
+    font-weight: 600;
+    color: var(--text-color);
+    margin: 0.5vw 0 1vw 0;
+}
+
+.text-content .tagline {
+    font-size: 1.3vw;
+    text-align: center;
+    color: #666;
+    max-width: 90%;
+    line-height: 1.8;
+}
+
+.wave {
+    animation: wave 2.5s infinite;
+    display: inline-block;
+    transform-origin: 70% 70%;
+}
+
+@keyframes wave {
+    0%, 100% { transform: rotate(0deg); }
+    10%, 30% { transform: rotate(14deg); }
+    20% { transform: rotate(-8deg); }
+    40%, 100% { transform: rotate(0deg); }
 }
 
 .hero-logos {
@@ -176,6 +590,13 @@ button {
     justify-content: center;
     align-items: center;
     overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.logo-circle:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 20px rgba(102, 126, 234, 0.3);
 }
 
 .logo-circle img {
@@ -194,46 +615,96 @@ button {
 .profile-picture {
     position: relative;
     width: 80%;
+    animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
 }
 
 .profile-picture img {
     width: 100%;
     object-fit: cover;
+    border-radius: 1vw;
+    transition: transform 0.3s ease;
+}
+
+.profile-picture:hover img {
+    transform: scale(1.02);
 }
 
 .shadow {
     width: 100%;
     height: 100%;
     border-radius: 0 5vw 0 5vw;
-    background-color: var(--shadow-color);
+    background: var(--accent-gradient);
+    opacity: 0.3;
     position: absolute;
     top: 1vw;
     left: 1vw;
     z-index: -1;
+    transition: all 0.3s ease;
 }
 
-.about, .experience {
+.profile-picture:hover .shadow {
+    top: 1.5vw;
+    left: 1.5vw;
+    opacity: 0.5;
+}
+
+.about, .experience, .skills {
     padding: 5vw 5vw;
     max-width: 80%;
     margin: 0 auto;
 }
 
-.about h2, .experience h2 {
-    font-size: 3vw;
-    margin-bottom: 2vw;
+.about h2, .experience h2, .skills h2 {
+    /* Inherits from .section-title utility class */
 }
 
 .about p, .experience p{
     font-size: 1.5vw;
-    line-height: 1.6;
+    line-height: 1.8;
     margin-bottom: 1.5vw;
-    opacity: 0.8;
+    opacity: 0.85;
+}
+
+/* Skills Section */
+.skills-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2vw;
+    margin-top: 3vw;
+}
+
+.skill-category {
+    padding: 2vw;
+}
+
+.skill-category h3 {
+    font-size: 1.5vw;
+    font-weight: 600;
+    margin-bottom: 1.5vw;
+    color: var(--text-color);
+}
+
+.skill-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.8vw;
+}
+
+.skill-tag {
+    /* Inherits from .tag and .tag-gradient utility classes */
 }
 
 .experience-item {
-    background-color: var(--experience-bg-color);
     padding: 2vw;
-    border-radius: 1vw;
     margin-bottom: 2vw;
 }
 
@@ -266,75 +737,109 @@ button {
 }
 
 .projects h2 {
-    font-size: 3vw;
-    margin-bottom: 2vw;
-    text-align: center;
+    /* Inherits from .section-title and .section-title-center utility classes */
 }
+
 .projects h3{
-    font-size: 1.8vw;
+    font-size: 20px;
     text-align: left;
-    margin-left: 4vw;
-    color: #888;
+    margin-left: 0;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    color: #667eea;
+    font-weight: 600;
 }
 
 .project-details h4 {
-    font-size: 1.2vw;
-    margin: 0;
+    font-size: 18px;
+    margin: 0 0 10px 0;
 }
 
 .project-details p {
-    font-size: 0.99vw;
+    font-size: 14px;
     text-align: left;
     color: #888;
+    line-height: 1.6;
+    margin-bottom: 10px;
 }
 
 .projects-container {
     display: flex;
     flex-wrap: wrap;
-    gap: 2vw;
-    justify-content: center;
+    gap: 25px;
+    justify-content: flex-start;
+    margin-bottom: 30px;
 }
 
 .project-item {
-    width: 30%;
-    background-color: var(--experience-bg-color);
-    border-radius: 1vw;
+    width: calc(33.333% - 17px);
     overflow: hidden;
-    margin-bottom: 2vw;
+    margin-bottom: 0;
     text-align: center;
+    cursor: pointer;
+}
+
+.project-item:hover {
+    box-shadow: 0 15px 40px rgba(0,0,0,0.15);
 }
 
 .project-item img {
     width: 100%;
     height: auto;
+    transition: transform 0.3s ease;
+}
+
+.project-item:hover img {
+    transform: scale(1.05);
 }
 
 .project-details {
-    padding: 1vw;
+    padding: 20px;
 }
 
 .project-tag {
-    margin-top: 1vw;
-
+    margin-top: 8px;
+    margin-bottom: 8px;
 }
 
 .project-tags {
-    display: inline-block;
-    color: var(--shadow-color);
-    padding: 0.5vw 1vw;
-    border-radius: 1vw;
-    font-size: 0.8vw;
     margin-bottom: 0.2vw;
-    border: 0.1vw solid var(--shadow-color)
+    margin-right: 0.3vw;
+    animation: fadeInUp 0.5s ease forwards;
+    opacity: 0;
+}
+
+.project-tags:nth-child(1) { animation-delay: 0.1s; }
+.project-tags:nth-child(2) { animation-delay: 0.2s; }
+.project-tags:nth-child(3) { animation-delay: 0.3s; }
+.project-tags:nth-child(4) { animation-delay: 0.4s; }
+.project-tags:nth-child(5) { animation-delay: 0.5s; }
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.projects-table tbody tr:hover .project-tags {
+    background: var(--accent-gradient);
+    color: white;
+    border-color: transparent;
+    transform: translateY(-2px);
 }
 
 .github {
     display: inline-block;
     text-align: center;
-    font-size: 0.99vw;
+    font-size: 14px;
     text-decoration: none;
     color: var(--view-full-resume-color);
-    margin-top: 0.5vw;
+    margin-top: 0;
     position: relative;
 }
 .github::after {
@@ -356,30 +861,29 @@ button {
 }
 
 .view {
-    display: inline-block;
+    display: block;
     text-align: center;
-    font-size: 1.5vw;
-    text-decoration: none;
-    color: var(--view-full-resume-color);
-    margin-left: 40%;
-    margin-top: 2%;
-    position: relative;
+    font-size: 18px;
+    padding: 15px 30px;
+    margin: 40px auto 0;
+    width: fit-content;
 }
 
 .view::after {
     content: '\279A';
     display: inline-block;
-    transition: transform 0.2s ease, margin 0.2s ease; 
-    margin-left: 0.1vw; 
-    position: relative;
-    top: 0.1vw; 
+    transition: transform 0.3s ease, margin 0.3s ease; 
+    margin-left: 0.5vw; 
 }
 
 .view:hover::after {
-    transform: translate(0.2vw, -0.2vw); 
-    margin-left: 0.2vw; 
-    top: 0; 
+    transform: translateX(5px); 
+    margin-left: 0.8vw; 
 }
+
+/* ==========================================
+   CONTACT SECTION
+   ========================================== */
 
 .contact {
     padding: 5vw 5vw;
@@ -390,20 +894,23 @@ button {
 
 .contact h2 {
     font-size: 3vw;
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 700;
     margin-bottom: 2vw;
 }
 
 .contact p {
     font-size: 1.4vw;
-    line-height: 1.6;
-    margin-bottom: 1.5vw;
-    opacity: 0.8;
+    line-height: 1.8;
+    margin-bottom: 2vw;
+    opacity: 0.85;
 }
 
 .contact-form {
     display: flex;
     flex-direction: column;
     gap: 1.5vw;
+    padding: 3vw;
 }
 
 .form-group {
@@ -413,38 +920,74 @@ button {
 }
 
 .form-group label {
-    font-size: 1.5vw;
+    font-size: 1.2vw;
+    font-weight: 600;
     margin-bottom: 0.5vw;
+    color: var(--text-color);
 }
 
 .form-group input,
 .form-group textarea {
-    font-size: 1.5vw;
-    padding: 0.8vw;
-    background-color: var( --background-color);
-    color: var(--resume-text-color);
-    border: 1px solid var(--text-color);
-    border-radius: 0.5vw;
+    font-family: 'Inter', sans-serif;
+    font-size: 1.2vw;
+    padding: 1vw;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    border: 2px solid rgba(102, 126, 234, 0.2);
+    border-radius: 0.8vw;
     width: 100%;
     box-sizing: border-box;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #667eea;
+    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
 }
 
 .form-group textarea {
     resize: vertical;
     height: 10vw;
+    min-height: 100px;
 }
 
 .submit-btn {
-    font-size: 1.5vw;
-    padding: 1vw 2vw;
-    background-color: var(--resume-btn-bg-color);
-    color: var(--resume-btn-text-color);
+    font-size: 1.3vw;
+    padding: 1.2vw 2vw;
     border: none;
-    border-radius: 1vw;
-    cursor: pointer;
     width: 100%;
     box-sizing: border-box;
+    overflow: hidden;
 }
+
+.submit-btn::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.3);
+    transform: translate(-50%, -50%);
+    transition: width 0.6s, height 0.6s;
+}
+
+.submit-btn:hover::before {
+    width: 300px;
+    height: 300px;
+}
+
+.submit-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
+}
+
+/* ==========================================
+   FOOTER
+   ========================================== */
 
 .line-1 {
   height: 1px;
@@ -463,20 +1006,67 @@ button {
     margin: 0.6vw;
 }
 
-/*next page */
+/* ==========================================
+   ARCHIVE PAGE
+   ========================================== */
 
 .all-projects {
-    padding: 3vw 3vw;
-    max-width: 85%;
+    padding: 4vw 3vw;
+    max-width: 90%;
     margin: 0 auto;
+    min-height: 80vh;
 }
 
 .back-link {
-    display: block;
-    margin-bottom: 2vw;
-    font-size: 1.5vw;
+    display: inline-block;
+    margin-bottom: 3vw;
+    font-size: 1.2vw;
+    font-weight: 600;
     text-decoration: none;
-    color: var(--nav-link-color);
+    color: #667eea;
+    transition: transform 0.3s ease, color 0.3s ease;
+    padding: 0.8vw 1.5vw;
+    border-radius: 0.5vw;
+    background: rgba(102, 126, 234, 0.1);
+}
+
+.back-link:hover {
+    transform: translateX(-5px);
+    color: #764ba2;
+    background: rgba(102, 126, 234, 0.2);
+}
+
+.archive-header {
+    text-align: center;
+    margin-bottom: 3vw;
+}
+
+.archive-header h2 {
+    font-size: 3.5vw;
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 700;
+    margin-bottom: 1vw;
+}
+
+.archive-subtitle {
+    font-size: 1.3vw;
+    color: #666;
+    margin-bottom: 2vw;
+}
+
+.github-link-btn {
+    margin-bottom: 3vw;
+    padding: 1vw 2vw;
+    font-size: 1.2vw;
+}
+
+.github-link-btn span {
+    display: inline-block;
+    transition: transform 0.3s ease;
+}
+
+.github-link-btn:hover span {
+    transform: rotate(20deg);
 }
 
 .all-projects h2 {
@@ -486,32 +1076,74 @@ button {
 
 .projects-table {
     width: 100%;
-    border-collapse: collapse;
+    border-collapse: separate;
+    border-spacing: 0;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.05);
 }
 
-.projects-table th, .projects-table td {
-    text-align: left;
-    padding: 1vw;
-    border-bottom: 1px solid #ddd;
+.projects-table thead {
+    /* Inherits from .gradient-bg utility class */
 }
 
 .projects-table th {
-    font-size: 1.5vw;
-    font-weight: normal;
+    text-align: left;
+    padding: 1.5vw;
+    color: white;
+    font-size: 1.2vw;
+    font-weight: 600;
+    font-family: 'Space Grotesk', sans-serif;
+}
+
+.projects-table tbody tr {
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    border-bottom: 1px solid rgba(102, 126, 234, 0.1);
+}
+
+.projects-table tbody tr:hover {
+    background-color: rgba(102, 126, 234, 0.05);
+    transform: scale(1.01);
 }
 
 .projects-table td {
-    font-size: 1.0vw;
+    text-align: left;
+    padding: 1.5vw;
+    font-size: 1vw;
+    vertical-align: middle;
+}
+
+.projects-table td:first-child {
+    font-weight: 700;
+    color: #667eea;
+    font-size: 1.2vw;
+    font-family: 'Space Grotesk', sans-serif;
+}
+
+.projects-table tbody tr:last-child {
+    border-bottom: none;
 }
 
 .projects-table a {
     text-decoration: none;
-    color: var(--nav-link-color);
-    font-size: 1.0vw;
+    color: #667eea;
+    font-size: 1vw;
+    font-weight: 500;
+    transition: color 0.3s ease;
+    position: relative;
 }
 
-.all-projects a:hover{
-    color: #a9a9a9;
+.projects-table a::after {
+    content: ' ↗';
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.projects-table a:hover {
+    color: #764ba2;
+}
+
+.projects-table a:hover::after {
+    opacity: 1;
 }
 
 .notification {
@@ -542,4 +1174,385 @@ button {
     display: block;
   }
 }
+
+/* ========================
+   RESPONSIVE DESIGN
+   ======================== */
+
+/* Tablet devices (768px - 1024px) */
+@media screen and (max-width: 1024px) {
+  .logo {
+    font-size: 2.5vw;
+  }
+
+  .nav-links a {
+    font-size: 1.5vw;
+  }
+
+  .text-content h1 {
+    font-size: 5vw;
+  }
+
+  .text-content .subtitle {
+    font-size: 2.5vw;
+  }
+
+  .text-content .tagline {
+    font-size: 1.8vw;
+  }
+
+  .about h2, .experience h2, .skills h2, .projects h2 {
+    font-size: 4vw;
+  }
+
+  .skill-category h3 {
+    font-size: 2vw;
+  }
+
+  .project-item {
+    width: 45%;
+  }
+}
+
+/* Mobile devices (max-width: 768px) */
+@media screen and (max-width: 768px) {
+  /* Hide desktop navigation */
+  .nav-links {
+    display: none;
+  }
+
+  .nav-right {
+    position: relative;
+    right: auto;
+    top: auto;
+  }
+
+  .nav-right button {
+    padding: 2vw;
+  }
+
+  #light-icon, #dark-icon {
+    width: 40px;
+    height: 40px;
+  }
+
+  .logo {
+    font-size: 5vw;
+    margin-bottom: 2vw;
+  }
+
+  /* Hero Section */
+  .hero-content {
+    flex-direction: column-reverse;
+    margin: 3vw;
+    margin-left: 5vw;
+    width: 90%;
+  }
+
+  .text-content {
+    width: 100%;
+    margin-top: 5vw;
+  }
+
+  .text-content .greeting {
+    font-size: 4vw;
+  }
+
+  .text-content h1 {
+    font-size: 8vw;
+  }
+
+  .text-content .subtitle {
+    font-size: 5vw;
+  }
+
+  .text-content .tagline {
+    font-size: 4vw;
+  }
+
+  .image-content {
+    width: 60%;
+  }
+
+  .logo-circle {
+    width: 12vw;
+    height: 12vw;
+  }
+
+  /* Hide dot navigation on mobile */
+  .dot-nav {
+    display: none;
+  }
+
+  /* Sections */
+  .about, .experience, .skills, .projects, .contact {
+    padding: 8vw 5vw;
+    max-width: 90%;
+  }
+
+  .about h2, .experience h2, .skills h2, .projects h2, .contact h2 {
+    font-size: 8vw;
+  }
+
+  .about p, .experience p {
+    font-size: 4vw;
+  }
+
+  /* Skills Section */
+  .skills-container {
+    grid-template-columns: 1fr;
+    gap: 4vw;
+  }
+
+  .skill-category {
+    padding: 4vw;
+  }
+
+  .skill-category h3 {
+    font-size: 5vw;
+    margin-bottom: 3vw;
+  }
+
+  .skill-tags {
+    gap: 2vw;
+  }
+
+  .skill-tag {
+    font-size: 3vw;
+    padding: 2vw 3vw;
+  }
+
+  /* Experience Section */
+  .experience-item {
+    padding: 4vw;
+    border-radius: 3vw;
+  }
+
+  .experience-header h3 {
+    font-size: 5vw;
+  }
+
+  .experience-header p {
+    font-size: 3.5vw;
+  }
+
+  .experience-details p {
+    font-size: 3.5vw;
+  }
+
+  /* Projects Section */
+  .projects h3 {
+    font-size: 5vw;
+    margin-left: 0;
+    text-align: center;
+  }
+
+  .projects-container {
+    flex-direction: column;
+    gap: 5vw;
+  }
+
+  .project-item {
+    width: 100%;
+    border-radius: 3vw;
+  }
+
+  .project-details {
+    padding: 4vw;
+  }
+
+  .project-details h4 {
+    font-size: 4.5vw;
+  }
+
+  .project-details p {
+    font-size: 3.5vw;
+  }
+
+  .project-tags {
+    font-size: 2.8vw;
+    padding: 1.5vw 3vw;
+  }
+
+  .github {
+    font-size: 3.5vw;
+  }
+
+  .view {
+    font-size: 4vw;
+    padding: 3vw 6vw;
+    margin-left: 0;
+    display: block;
+    text-align: center;
+    margin-top: 5vw;
+  }
+
+  /* Contact Section */
+  .contact {
+    max-width: 90%;
+  }
+
+  .contact p {
+    font-size: 4vw;
+  }
+
+  .contact-form {
+    padding: 5vw;
+    gap: 4vw;
+  }
+
+  .form-group label {
+    font-size: 4vw;
+  }
+
+  .form-group input,
+  .form-group textarea {
+    font-size: 4vw;
+    padding: 3vw;
+  }
+
+  .submit-btn {
+    font-size: 4.5vw;
+    padding: 3vw 5vw;
+  }
+
+  /* Footer */
+  .footer {
+    padding: 6vw 5vw;
+  }
+
+  .footer .logo-circle {
+    width: 10vw;
+    height: 10vw;
+  }
+
+  .footer-text {
+    font-size: 3vw;
+  }
+
+  /* Archive Page */
+  .all-projects {
+    max-width: 95%;
+    padding: 5vw 2vw;
+  }
+
+  .back-link {
+    font-size: 4vw;
+    padding: 2vw 4vw;
+    margin-bottom: 5vw;
+  }
+
+  .archive-header h2 {
+    font-size: 8vw;
+  }
+
+  .archive-subtitle {
+    font-size: 4vw;
+  }
+
+  .github-link-btn {
+    font-size: 4vw;
+    padding: 3vw 5vw;
+    border-radius: 2vw;
+  }
+
+  /* Make table scrollable on mobile */
+  .projects-table {
+    display: block;
+    overflow-x: auto;
+    border-radius: 3vw;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .projects-table thead,
+  .projects-table tbody,
+  .projects-table tr {
+    display: block;
+  }
+
+  .projects-table thead {
+    display: none; /* Hide headers on mobile for card layout */
+  }
+
+  .projects-table tr {
+    margin-bottom: 4vw;
+    border: 1px solid rgba(102, 126, 234, 0.2);
+    border-radius: 3vw;
+    padding: 4vw;
+    background: var(--experience-bg-color);
+  }
+
+  .projects-table td {
+    display: block;
+    text-align: left;
+    padding: 2vw 0;
+    font-size: 3.5vw;
+    border: none;
+  }
+
+  .projects-table td:first-child {
+    font-size: 6vw;
+    margin-bottom: 2vw;
+  }
+
+  .projects-table td:before {
+    content: attr(data-label);
+    font-weight: bold;
+    display: block;
+    margin-bottom: 1vw;
+    color: #667eea;
+  }
+
+  .projects-table td:first-child:before {
+    content: 'Year: ';
+  }
+
+  .projects-table a {
+    font-size: 3.5vw;
+  }
+
+  .project-tag {
+    margin-top: 2vw;
+  }
+
+  .project-tags {
+    font-size: 3vw;
+    padding: 1.5vw 3vw;
+    margin-bottom: 1vw;
+  }
+}
+
+/* Small mobile devices (max-width: 480px) */
+@media screen and (max-width: 480px) {
+  .logo {
+    font-size: 6vw;
+  }
+
+  .text-content h1 {
+    font-size: 10vw;
+  }
+
+  .text-content .subtitle {
+    font-size: 6vw;
+  }
+
+  .text-content .tagline {
+    font-size: 4.5vw;
+  }
+
+  .about h2, .experience h2, .skills h2, .projects h2, .contact h2 {
+    font-size: 9vw;
+  }
+
+  .hero-logos {
+    flex-wrap: wrap;
+    gap: 3vw;
+  }
+
+  .logo-circle {
+    width: 15vw;
+    height: 15vw;
+  }
+}
+
 

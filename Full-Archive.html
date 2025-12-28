@@ -1,23 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+	<!-- Meta Information -->
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Archives Umang Patel</title>
+	<meta name="description" content="Complete archive of Umang Patel's projects - Software Engineering, AI/ML, Full-Stack Development">
+	
+	<!-- Title & Favicon -->
+	<title>Project Archive - Umang Patel</title>
+	<link rel="icon" href="Resources/logo/title.png" type="image/x-icon">
+	
+	<!-- Stylesheets -->
 	<link rel="stylesheet" href="styles.css">
-	<link rel="icon" href="Resources/logo/title.png" type="image/x-icon" >
+	
+	<!-- Google Fonts -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+	
+	<!-- Google Analytics -->
+	<!-- Google Analytics -->
 	<script async src="https://www.googletagmanager.com/gtag/js?id=G-NNVLD5333R"></script>
 	<script>
 		window.dataLayer = window.dataLayer || [];
 		function gtag(){dataLayer.push(arguments);}
 		gtag('js', new Date());
-
 		gtag('config', 'G-NNVLD5333R');
 	</script>
 </head>
+
 <body>
+	<!-- Header & Navigation -->
 	<header>
-		<nav class="navbar">
+		<nav class="navbar" role="navigation" aria-label="Main navigation">
 			<div class="logo">&lt; Umang <br>&nbsp Patel /&gt;</div>
 			<div class="nav-right">
 				<!-- <button class="resume-btn">RESUME</button> -->
@@ -57,13 +72,21 @@
 		</nav>
 		<div class="line-1"></div>
 	</header>
+	
+	<!-- Archive Section -->
 	<section class="all-projects">
-		<a href="index.html" class="back-link">&larr; Umang Patel.</a>
-		<h2>All Projects</h2>
-		<a href="https://github.com/umangptl" class="view" style="margin-left: 0%; margin-bottom: 2%;">
-		🔭 View Github</a>
-		<table class="projects-table">
-			<thead>
+		<a href="index.html" class="back-link">← Back to Home</a>
+		<div class="archive-header">
+			<h2 class="gradient-text">Project Archive</h2>
+			<p class="archive-subtitle">A complete timeline of my software engineering journey</p>
+		</div>
+		<a href="https://github.com/umangptl" target="_blank" class="github-link-btn btn btn-gradient">
+			<span>🔭</span> View Full GitHub Profile
+		</a>
+		
+		<!-- Projects Table -->
+		<table class="projects-table card">
+			<thead class="gradient-bg">
 				<tr>
 					<th>Year</th>
 					<th>Project</th>
@@ -73,197 +96,197 @@
 			</thead>
 			<tbody>
 				<tr>
-					<td>2024</td>
-					<td>BitSmart - Bitcoin Prediction</td>
-					<td>
+					<td data-label="Year">2024</td>
+					<td data-label="Project">BitSmart - Bitcoin Prediction</td>
+					<td data-label="Built with">
 						<div class="project-tag">
-							<span class="project-tags">Python</span>
-							<span class="project-tags">Feature Engineering</span>
-							<span class="project-tags">Random Forest</span>
-							<span class="project-tags">ARIMA</span>
-							<span class="project-tags">LSTM</span>
+						<span class="project-tags tag tag-outline">Python</span>
+						<span class="project-tags tag tag-outline">Feature Engineering</span>
+						<span class="project-tags tag tag-outline">Random Forest</span>
+						<span class="project-tags tag tag-outline">ARIMA</span>
+						<span class="project-tags tag tag-outline">LSTM</span>
 						</div>
 					</td>
-					<td><a href="https://github.com/umangptl/BitSmart-Console" class="github">/umangptl/BitSmart-Console</a></td>
+					<td data-label="Link"><a href="https://github.com/umangptl/BitSmart-Console" class="github">/umangptl/BitSmart-Console</a></td>
 				</tr>
 				<tr>
 
 				<tr>
-					<td>2024</td>
-					<td>Seeing-AI- Testing</td>
-					<td>
+					<td data-label="Year">2024</td>
+					<td data-label="Project">Seeing-AI- Testing</td>
+					<td data-label="Built with">
 						<div class="project-tag">
-							<span class="project-tags">Java</span>
-							<span class="project-tags">Appium</span>
-							<span class="project-tags">Selenium</span>
-							<span class="project-tags">Automation Testing</span>	
+						<span class="project-tags tag tag-outline">Java</span>
+						<span class="project-tags tag tag-outline">Appium</span>
+						<span class="project-tags tag tag-outline">Selenium</span>
+						<span class="project-tags tag tag-outline">Automation Testing</span>
 						</div>
 					</td>
-					<td><a href="https://github.com/umangptl/Test-Automation-SeeingAI" class="github">umangptl/Test-Automation..</a></td>
+					<td data-label="Link"><a href="https://github.com/umangptl/Test-Automation-SeeingAI" class="github">umangptl/Test-Automation..</a></td>
 				</tr>
 				<tr>
 				<tr>
-					<td>2024</td>
-					<td>Tele & Mental Health - Data Mining</td>
-					<td>
+					<td data-label="Year">2024</td>
+					<td data-label="Project">Tele & Mental Health - Data Mining</td>
+					<td data-label="Built with">
 						<div class="project-tag">
-							<span class="project-tags">Python</span>
-							<span class="project-tags">Streamlit</span>
-							<span class="project-tags">Data Mining & Visualization</span>
-							<span class="project-tags">Data Analytics</span>
+						<span class="project-tags tag tag-outline">Python</span>
+						<span class="project-tags tag tag-outline">Streamlit</span>
+						<span class="project-tags tag tag-outline">Data Mining & Visualization</span>
+						<span class="project-tags tag tag-outline">Data Analytics</span>
 						</div>
 					</td>
-					<td><a href="https://github.com/umangptl/Telehealth-n-Mental-Health-Dynamics" class="github">umangptl/Teleh-n-Mental..</a></td>
+					<td data-label="Link"><a href="https://github.com/umangptl/Telehealth-n-Mental-Health-Dynamics" class="github">umangptl/Teleh-n-Mental..</a></td>
 				</tr>
 				<tr>
 				<tr>
-					<td>2024</td>
-					<td>Stock Suggestion Engine</td>
-					<td>
+					<td data-label="Year">2024</td>
+					<td data-label="Project">Stock Suggestion Engine</td>
+					<td data-label="Built with">
 						<div class="project-tag">
-							<span class="project-tags">Python</span>
-							<span class="project-tags">yfinance</span>
-							<span class="project-tags">Flask</span>
-							<span class="project-tags">HTMl/CSS</span>
+						<span class="project-tags tag tag-outline">Python</span>
+						<span class="project-tags tag tag-outline">yfinance</span>
+						<span class="project-tags tag tag-outline">Flask</span>
+						<span class="project-tags tag tag-outline">HTMl/CSS</span>
 						</div>
 					</td>
-					<td><a href="https://github.com/umangptl/Stock-Suggestion-Engine" class="github">umangptl/Stock-Engine</a></td>
+					<td data-label="Link"><a href="https://github.com/umangptl/Stock-Suggestion-Engine" class="github">umangptl/Stock-Engine</a></td>
 				</tr>
 				<tr>
-					<td>2023</td>
-					<td>Bay Area Bike Share Data Visualization</td>
-					<td>
+					<td data-label="Year">2023</td>
+					<td data-label="Project">Bay Area Bike Share Data Visualization</td>
+					<td data-label="Built with">
 						<div class="project-tag">
-							<span class="project-tags">Python</span>
-							<span class="project-tags">Google Cloud</span>
-							<span class="project-tags">Streamlit</span>
-							<span class="project-tags">Pandas </span>
+							<span class="project-tags tag tag-outline">Python</span>
+							<span class="project-tags tag tag-outline">Google Cloud</span>
+							<span class="project-tags tag tag-outline">Streamlit</span>
+							<span class="project-tags tag tag-outline">Pandas </span>
 						</div>
 					</td>
-					<td><a href="https://github.com/umangptl/SF-Bike-Share" class="github">umangptl/SF-Bike-Share</a></td>
+					<td data-label="Link"><a href="https://github.com/umangptl/SF-Bike-Share" class="github">umangptl/SF-Bike-Share</a></td>
 				</tr>
 				<tr>
-					<td>2023</td>
-					<td>Weather App</td>
-					<td>
+					<td data-label="Year">2023</td>
+					<td data-label="Project">Weather App</td>
+					<td data-label="Built with">
 						<div class="project-tag">
-							<span class="project-tags">Java</span>
-							<span class="project-tags">Spring-Boot</span>
-							<span class="project-tags">REST-API</span>
-							<span class="project-tags">PostgreSQL</span>
+							<span class="project-tags tag tag-outline">Java</span>
+							<span class="project-tags tag tag-outline">Spring-Boot</span>
+							<span class="project-tags tag tag-outline">REST-API</span>
+							<span class="project-tags tag tag-outline">PostgreSQL</span>
 						</div>
 					</td>
-					<td><a href="https://github.com/umangptl/WeatherCast" class="github">umangptl/WeatherCast</a></td>
+					<td data-label="Link"><a href="https://github.com/umangptl/WeatherCast" class="github">umangptl/WeatherCast</a></td>
 				</tr>
 				<tr>
-					<td>2022</td>
-					<td>Character Recognition</td>
-					<td>
+					<td data-label="Year">2022</td>
+					<td data-label="Project">Character Recognition</td>
+					<td data-label="Built with">
 						<div class="project-tag">
-							<span class="project-tags">Python</span>
-							<span class="project-tags">Machine learning</span>
-							<span class="project-tags">Neural Networks CNN</span>
-							<span class="project-tags">keras</span>
+							<span class="project-tags tag tag-outline">Python</span>
+							<span class="project-tags tag tag-outline">Machine learning</span>
+							<span class="project-tags tag tag-outline">Neural Networks CNN</span>
+							<span class="project-tags tag tag-outline">keras</span>
 						</div>
 					</td>
-					<td><a href="https://github.com/umangptl/ML-Handwritten-Character-Recognition-CNN" class="github">umangptl/Char-Recognition</a></td>
+					<td data-label="Link"><a href="https://github.com/umangptl/ML-Handwritten-Character-Recognition-CNN" class="github">umangptl/Char-Recognition</a></td>
 				</tr>
 				<tr>
-					<td>2022</td>
-					<td>House Prices Regression</td>
-					<td>
+					<td data-label="Year">2022</td>
+					<td data-label="Project">House Prices Regression</td>
+					<td data-label="Built with">
 						<div class="project-tag">
-							<span class="project-tags">Python</span>
-							<span class="project-tags">Machine learning</span>
-							<span class="project-tags">Linear Regression</span>
-							<span class="project-tags">Gradient Descent</span>
+							<span class="project-tags tag tag-outline">Python</span>
+							<span class="project-tags tag tag-outline">Machine learning</span>
+							<span class="project-tags tag tag-outline">Linear Regression</span>
+							<span class="project-tags tag tag-outline">Gradient Descent</span>
 						</div>
 					</td>
-					<td><a href="https://github.com/umangptl/ML-House-Prices-Regression" class="github">umangptl/ML-House-Prices</a></td>
+					<td data-label="Link"><a href="https://github.com/umangptl/ML-House-Prices-Regression" class="github">umangptl/ML-House-Prices</a></td>
 				</tr>
 				<tr>
-					<td>2021</td>
-					<td>Web Scrapping & Categorization</td>
-					<td>
+					<td data-label="Year">2021</td>
+					<td data-label="Project">Web Scrapping & Categorization</td>
+					<td data-label="Built with">
 						<div class="project-tag">
-							<span class="project-tags">Java</span>
-							<span class="project-tags">Data Structures</span>
-							<span class="project-tags">Algorithms</span>
-							<span class="project-tags">Similarity Analysis</span>
+							<span class="project-tags tag tag-outline">Java</span>
+							<span class="project-tags tag tag-outline">Data Structures</span>
+							<span class="project-tags tag tag-outline">Algorithms</span>
+							<span class="project-tags tag tag-outline">Similarity Analysis</span>
 						</div>
 					</td>
-					<td><a href="https://github.com/umangptl/Data-Structures-and-Algorithms" class="github">umangptl/Wiki-DSnAlgorithms</a></td>
+					<td data-label="Link"><a href="https://github.com/umangptl/Data-Structures-and-Algorithms" class="github">umangptl/Wiki-DSnAlgorithms</a></td>
 				</tr>
 				<tr>
-					<td>2021</td>
-					<td>Text Based Game</td>
-					<td>
+					<td data-label="Year">2021</td>
+					<td data-label="Project">Text Based Game</td>
+					<td data-label="Built with">
 						<div class="project-tag">
-							<span class="project-tags">C-programming</span>
-							<span class="project-tags">Text-based Game</span>
-							<span class="project-tags">Systems Programming</span>
-							<span class="project-tags">Virtual World Simulation</span>
+							<span class="project-tags tag tag-outline">C-programming</span>
+							<span class="project-tags tag tag-outline">Text-based Game</span>
+							<span class="project-tags tag tag-outline">Systems Programming</span>
+							<span class="project-tags tag tag-outline">Virtual World Simulation</span>
 						</div>
 					</td>
-					<td><a href="https://github.com/umangptl/Systems-Programming-Text-based-Game-stimulation" class="github">umangptl/Text-based-Game</a></td>
+					<td data-label="Link"><a href="https://github.com/umangptl/Systems-Programming-Text-based-Game-stimulation" class="github">umangptl/Text-based-Game</a></td>
 				</tr>
 				<tr>
-					<td>2021</td>
-					<td>Auto Complete Suggestions</td>
-					<td>
+					<td data-label="Year">2021</td>
+					<td data-label="Project">Auto Complete Suggestions</td>
+					<td data-label="Built with">
 						<div class="project-tag">
-							<span class="project-tags">C-programming</span>
-							<span class="project-tags">Trie Data Structure</span>
-							<span class="project-tags">Command-line Interface</span>
-							<span class="project-tags">Auto-complete</span>
+							<span class="project-tags tag tag-outline">C-programming</span>
+							<span class="project-tags tag tag-outline">Trie Data Structure</span>
+							<span class="project-tags tag tag-outline">Command-line Interface</span>
+							<span class="project-tags tag tag-outline">Auto-complete</span>
 						</div>
 					</td>
-					<td><a href="https://github.com/umangptl/C-auto-complete-suggestions" class="github">umangptl/Auto-Suggestion</a></td>
+					<td data-label="Link"><a href="https://github.com/umangptl/C-auto-complete-suggestions" class="github">umangptl/Auto-Suggestion</a></td>
 				</tr>
 				<tr>
-					<td>2021</td>
-					<td>Social Distance Simulator</td>
-					<td>
+					<td data-label="Year">2021</td>
+					<td data-label="Project">Social Distance Simulator</td>
+					<td data-label="Built with">
 						<div class="project-tag">
-							<span class="project-tags">Prolog</span>
-							<span class="project-tags">Logic Programming</span>
-							<span class="project-tags">Grid System</span>
-							<span class="project-tags">Pathfinding Algorithm</span>
+							<span class="project-tags tag tag-outline">Prolog</span>
+							<span class="project-tags tag tag-outline">Logic Programming</span>
+							<span class="project-tags tag tag-outline">Grid System</span>
+							<span class="project-tags tag tag-outline">Pathfinding Algorithm</span>
 						</div>
 					</td>
-					<td><a href="https://github.com/umangptl/Prolog-Social-Distancing-Simulator" class="github">umangptl/Social-Distance</a></td>
+					<td data-label="Link"><a href="https://github.com/umangptl/Prolog-Social-Distancing-Simulator" class="github">umangptl/Social-Distance</a></td>
 				</tr>
 				<tr>
-					<td>2021</td>
-					<td>Pattern Matching</td>
-					<td>
+					<td data-label="Year">2021</td>
+					<td data-label="Project">Pattern Matching</td>
+					<td data-label="Built with">
 						<div class="project-tag">
-							<span class="project-tags">Scala</span>
-							<span class="project-tags">Pattern Matching</span>
-							<span class="project-tags">Regular Expressions</span>
-							<span class="project-tags">Functional Programming</span>
+							<span class="project-tags tag tag-outline">Scala</span>
+							<span class="project-tags tag tag-outline">Pattern Matching</span>
+							<span class="project-tags tag tag-outline">Regular Expressions</span>
+							<span class="project-tags tag tag-outline">Functional Programming</span>
 						</div>
 					</td>
-					<td><a href="https://github.com/umangptl/Scala-Pattern-Matching" class="github">umangptl/Pattern-Matching</a></td>
+					<td data-label="Link"><a href="https://github.com/umangptl/Scala-Pattern-Matching" class="github">umangptl/Pattern-Matching</a></td>
 				</tr>
 				<tr>
-					<td>2021</td>
-					<td>Boolean Expressions</td>
-					<td>
+					<td data-label="Year">2021</td>
+					<td data-label="Project">Boolean Expressions</td>
+					<td data-label="Built with">
 						<div class="project-tag">
-							<span class="project-tags">Clojure</span>
-							<span class="project-tags">Boolean Expressions</span>
-							<span class="project-tags">Functional Programming</span>
-							<span class="project-tags">Expression Evaluation</span>
+							<span class="project-tags tag tag-outline">Clojure</span>
+							<span class="project-tags tag tag-outline">Boolean Expressions</span>
+							<span class="project-tags tag tag-outline">Functional Programming</span>
+							<span class="project-tags tag tag-outline">Expression Evaluation</span>
 						</div>
 					</td>
-					<td><a href="https://github.com/umangptl/Clojure-boolean-expressions" class="github">umangptl/Boolean-Expression</a></td>
+					<td data-label="Link"><a href="https://github.com/umangptl/Clojure-boolean-expressions" class="github">umangptl/Boolean-Expression</a></td>
 				</tr>
 			</tbody>
 		</table>
 	</section>
 
-
+	<!-- Footer -->
 	<footer class="footer">
 		<div class="line-1"></div>
 		<div class="hero-logos">
@@ -283,12 +306,12 @@
 				<a href="https://www.instagram.com/umangptl"><img src="Resources/logo/instagram.png" alt="Logo 5" style="margin-top: 0.3vw;"></a>
 			</div>
 		</div>
-		<div class="footer-text-p">⚡ Powered by Formspree & GitHub</div>
+		<div class="footer-text">⚡ Powered by Formspree & GitHub</div>
 		<div class="footer-text">🏗️ Developed & Designed by Umang Patel ✨</div>
-		<div class="footer-text-p"> © 2024 &lt; Umang Patel /&gt; </div>
-		
+		<div class="footer-text"> © 2025 &lt; Umang Patel /&gt; </div>
 	</footer>
 
+	<!-- JavaScript -->
 	<script src="script.js"></script>
 </body>
 </html>
